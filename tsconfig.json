@@ -4,14 +4,12 @@
     "module": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     "types": [
-      "astro/client",
-      "jest"
+      "astro/client"
     ],
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true
-  },
-  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]
+  }
 }

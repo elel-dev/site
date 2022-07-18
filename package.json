@@ -7,18 +7,13 @@
     "start": "astro dev",
     "build": "astro build",
     "build-ts": "astro check && tsc --noEmit && astro build",
-    "preview": "astro preview",
-    "test": "jest"
+    "preview": "astro preview"
   },
   "devDependencies": {
     "@astrojs/react": "^0.4.1",
-    "@testing-library/react": "^13.3.0",
     "@types/react": "^18.0.15",
     "astro": "^1.0.0-beta.72",
-    "jest": "^28.1.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@types/jest": "^28.1.6",
-    "ts-jest": "^28.0.7"
+    "react-dom": "^18.2.0"
   }
 }
