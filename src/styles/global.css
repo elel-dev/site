@@ -18,3 +18,8 @@
   --clr-gruv-gray: #a89984;
   --clr-gruv-orange: #d65d0e;
 }
+
+body {
+  background-color: var(--clr-gruv-bg);
+  color: var(--clr-gruv-gray);
+}
