@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+import GruvText from "../UI/GruvText/GruvText";
 
 //styles
 import Styles from "./sidebar.module.css";
@@ -7,7 +8,9 @@ const Sidebar = () => {
   return (
     <aside className={Styles.sidebar}>
       <section className={Styles.header}>
-        <h1>ELEL</h1>
+        <h1 className={Styles.title}>
+          <GruvText text="ELEL" divider={1} startFrom={1}/>
+        </h1>
         <h3>FULL-STACK DEVELOPER</h3>
       </section>
       <section className={Styles.contacts}>
@@ -22,7 +25,7 @@ const Sidebar = () => {
         <h1>LINK</h1>
       </section>
     </aside>
-  )
-}
+  );
+};
 
 export default Sidebar;
