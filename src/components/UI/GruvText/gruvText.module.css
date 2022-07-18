@@ -1,0 +1,21 @@
+.red {
+  color: var(--clr-gruv-red);
+}
+.orange {
+  color: var(--clr-gruv-orange);
+}
+.green {
+  color: var(--clr-gruv-green);
+}
+.yellow {
+  color: var(--clr-gruv-yellow);
+}
+.blue {
+  color: var(--clr-gruv-blue);
+}
+.purple {
+  color: var(--clr-gruv-purple);
+}
+.aqua {
+  color: var(--clr-gruv-aqua);
+}
