@@ -18,6 +18,10 @@
   justify-content: center;
 }
 
+.title {
+  font-size: 4rem;
+}
+
 .contacts {
   height: 50vh;
   width: 100%;
