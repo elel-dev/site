@@ -1,6 +1,12 @@
+/*
+*  =======
+*  SIDEBAR
+*  =======
+*/
+
 .sidebar {
   position: fixed;
-  width: 20vw;
+  width: 17.5vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -8,6 +14,12 @@
   justify-content: flex-start;
   border-right: 1px solid var(--clr-gruv-gray);
 }
+
+/*
+*  ========
+*  CONTACTS
+*  ========
+*/
 
 .contacts {
   height: 50vh;
@@ -17,6 +29,51 @@
   align-items: center;
   justify-content: center;
 }
+
+.contact {
+  width: 90%;
+  margin: 2% 0;
+  display: flex;
+  align-items: center;
+  padding: 1%;
+  border: 1px solid var(--clr-gruv-bg);
+}
+
+.contact:hover {
+  border: 1px solid var(--clr-gruv-gray);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact [astro-icon] {
+  width: 10%;
+  margin: 0 5%;
+}
+
+.contact h3 {
+  font-size: 1.25rem;
+}
+
+.contact:hover [astro-icon] {
+  transform: scale(1.1);
+}
+
+.contact:hover [astro-icon="github"] {
+  color: var(--clr-gruv-orange);
+}
+
+.contact:hover [astro-icon="email"] {
+  color: var(--clr-gruv-green);
+}
+.contact:hover:last-of-type [astro-icon="email"] {
+  color: var(--clr-gruv-yellow);
+}
+
+/*
+*  =======
+*  SOCIAL
+*  =======
+*/
 
 .social {
   width: 100%;
