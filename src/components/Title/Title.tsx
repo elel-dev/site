@@ -7,9 +7,9 @@ import Styles from "./title.module.css";
 const Title = () => {
   return (
     <section className={Styles.header}>
-      <h1 className={Styles.title}>
+      <a href="/" className={Styles.title}>
         <GruvText text="ELEL" divider={1} startFrom={1} />
-      </h1>
+      </a>
       <h3 className={Styles.subTtile}>FULL-STACK DEVELOPER</h3>
     </section>
   );
