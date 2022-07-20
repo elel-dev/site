@@ -13,6 +13,7 @@ a {
 }
 
 :root {
+  /* gruv */
   --clr-gruv-bg: #282828;
   --clr-gruv-red: #cc241d;
   --clr-gruv-green: #98971a;
@@ -22,6 +23,14 @@ a {
   --clr-gruv-aqua: #689d6a;
   --clr-gruv-gray: #a89984;
   --clr-gruv-orange: #d65d0e;
+  /* general */
+  --clr-light-gray: rgb(199, 199, 204);
+  --clr-medium-gray: rgb(72, 72, 74);
+  
+
+	
+
+
 }
 
 body {
