@@ -2,8 +2,8 @@
   color: var(--clr-gruv-orange);
   padding: 0.75rem 1rem;
   border: 1px solid var(--clr-gruv-orange); 
-  border-radius: 5px;
-  font-size: 1.5rem;
+  border-radius: var(--b-radius);
+  font-size: var(--f-xm);
   cursor: pointer;
   transition: all ease 0.25s;
 }

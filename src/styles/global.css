@@ -1,6 +1,6 @@
 @font-face {
   font-family: "MemphisRiver";
-  src: url(/MemphisRiver.otf)
+  src: url(/MemphisRiver.otf);
 }
 
 *,
@@ -18,8 +18,8 @@ a {
 }
 
 .content {
-  width: 82.5vw;
-  margin-left: 17.5vw;
+  width: var(--navbar-width);
+  margin-left: var(--sidebar-width);
   padding: 5%;
   padding-top: 15vh;
 }
@@ -38,6 +38,27 @@ a {
   /* general */
   --clr-light-gray: rgb(199, 199, 204);
   --clr-medium-gray: rgb(72, 72, 74);
+  --clr-tooltip: rgba(0, 0, 0, 0.5);
+  /* layout */
+  --sidebar-width: 17.5vw;
+  --sidebar-height: 100vh;
+  --navbar-width: 82.5vw;
+  --navbar-height: 10vh;
+  --layout-border: 1px solid var(--clr-gruv-gray);
+  /* icons */
+  --icon-s: 30px;
+  --icon-m: 40px;
+  /* misc */
+  --b-radius: 5px;
+  --transition-f: all ease 0.15s;
+  --transition-s: all ease 0.25s;
+  /* fonts */
+  --f-s: 1rem;
+  --f-xs: 1.25rem;
+  --f-m: 1.5rem;
+  --f-xm: 1.75rem;
+  --f-l: 2rem;
+  --f-xl: 3rem;
 }
 
 body {
@@ -45,32 +66,31 @@ body {
   color: var(--clr-gruv-gray);
 }
 
-
 /* GENERAL COLORS CLASS */
-.red{
+.red {
   color: var(--clr-gruv-red);
 }
 
-.orange{
+.orange {
   color: var(--clr-gruv-aqua);
 }
 
-.green{
+.green {
   color: var(--clr-gruv-green);
 }
 
-.yellow{
+.yellow {
   color: var(--clr-gruv-yellow);
 }
 
-.blue{
+.blue {
   color: var(--clr-gruv-blue);
 }
 
-.purple{
+.purple {
   color: var(--clr-gruv-purple);
 }
 
-.aqua{
+.aqua {
   color: var(--clr-gruv-aqua);
 }

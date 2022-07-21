@@ -1,7 +1,7 @@
 nav {
-  width: 82.5vw;
-  height: 10vh;
-  margin-left: 17.5vw;
+  width: var(--navbar-width);
+  height: var(--navbar-height);
+  margin-left: var(--sidebar-width);
   padding: 0 2.5%;
   display: flex;
   align-items: center;
@@ -15,7 +15,7 @@ nav {
   position: absolute;
   bottom: 5%;
   left: 10%;
-  font-size: 3rem;
+  font-size: var(--f-xl);
   font-family: "MemphisRiver";
   font-style: italic;
 }
@@ -25,23 +25,23 @@ nav {
   width: 50%;
   display: flex;
   justify-content: flex-end;
-  border-bottom: 1px solid var(--clr-gruv-gray);
+  border-bottom: var(--layout-border);
 }
 
 .links a {
-  font-size: 1.5rem;
+  font-size: var(--f-m);
   margin: 0 2.5%;
   padding: 2.5% 0;
 }
 
 .links a span {
   opacity: 0;
-  font-size: 1.75rem;
+  font-size: var(--f-xm);
   font-weight: bold;
 }
 
 .links a:hover span {
   opacity: 0.75;
-  transition: all ease 0.15s;
+  transition: --transition-f;
 }
 

@@ -6,13 +6,13 @@
 
 .sidebar {
   position: fixed;
-  width: 17.5vw;
-  height: 100vh;
+  width: var(--sidebar-width);
+  height: var(--sidebar-height);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  border-right: 1px solid var(--clr-gruv-gray);
+  border-right: var(--layout-border);
 }
 
 /*
@@ -41,17 +41,19 @@
 
 .contact:hover {
   border: 1px solid var(--clr-gruv-gray);
-  border-radius: 5px;
+  border-radius: var(--b-radius);
   cursor: pointer;
 }
 
 .contact [astro-icon] {
-  width: 10%;
+  height: var(--icon-s);
+  width: var(--icon-s);
   margin: 0 5%;
+  transition: --transition-f;
 }
 
 .contact h3 {
-  font-size: 1.25rem;
+  font-size: var(--f-xs);
 }
 
 .contact:hover [astro-icon] {
@@ -85,8 +87,8 @@
 
 .social a {
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: var(--icon-m);
+  height: var(--icon-m);
 }
 
 .social p {
@@ -95,6 +97,9 @@
 
 .social a:hover {
   transform: scale(1.1);
+}
+.social a [astro-icon] {
+  transition: --transition-f;
 }
 
 .social a:hover [astro-icon="medium"] {
@@ -139,11 +144,11 @@
 
 .copyright a:hover {
   transform: scale(1.1);
-  transition: all ease 0.25s;
+  transition: --transition-s;
   color: var(--clr-gruv-aqua);
 }
 
 .copyright a [astro-icon] {
-  width: 25px;
-  height: 25px;
+  height: var(--icon-s);
+  width: var(--icon-s);
 }
