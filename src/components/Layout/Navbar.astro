@@ -1,7 +1,5 @@
 ---
-//styles
-import "../../styles/navbar.css";
-import "../../styles/btns.css";
+//
 ---
 <nav>
   <p class="question">can u gruvv?</p>
@@ -25,3 +23,52 @@ import "../../styles/btns.css";
     </a>
   </section>
 </nav>
+
+<style>
+  nav {
+    width: var(--navbar-width);
+    height: var(--navbar-height);
+    margin-left: var(--sidebar-width);
+    padding: 0 2.5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    background-color: var(--clr-gruv-bg);
+    z-index: 1;
+  }
+
+  .question {
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    font-size: var(--f-xl);
+    font-family: "MemphisRiver";
+    font-style: italic;
+  }
+
+  .links {
+    margin: 0 2.5%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: var(--layout-border);
+  }
+
+  .links a {
+    font-size: var(--f-m);
+    margin: 0 2.5%;
+    padding: 2.5% 0;
+  }
+
+  .links a span {
+    opacity: 0;
+    font-size: var(--f-xm);
+    font-weight: bold;
+  }
+
+  .links a:hover span {
+    opacity: 0.75;
+    transition: --transition-f;
+  }
+</style>

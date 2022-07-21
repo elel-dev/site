@@ -1,13 +1,82 @@
 ---
-import {Icon} from "astro-icon";
+import { Icon } from "astro-icon";
 //styles
 import "../../styles/theme.css";
 ---
 <div class="wrapper">
-  <Icon name="darkmode"/>
+  <Icon name="darkmode" />
   <div class="switcher">
     <span class="tooltiptext">...</span>
     <button class="circle"></button>
   </div>
-  <Icon name="lightmode"/>
+  <Icon name="lightmode" />
 </div>
+<style>
+  .wrapper {
+    padding: 2.5%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .wrapper [astro-icon] {
+    width: var(--icon-s);
+    height: var(--icon-s);
+  }
+
+  .switcher {
+    margin: 0 10px;
+    height: 25px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 4px;
+    background-color: var(--clr-medium-gray);
+    position: relative;
+  }
+
+  .circle {
+    height: 21px;
+    width: 21px;
+    border-radius: 50%;
+    background-color: var(--clr-light-gray);
+  }
+
+  .switcher .tooltiptext {
+    width: 50px;
+    padding: 5px 1%;
+    background-color: var(--clr-tooltip);
+    color: var(--clr-grub-gray);
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 150%;
+    left: 0;
+    user-select: none;
+    opacity: 0;
+    z-index: 1;
+    transition: all ease 0.25s;
+  }
+
+  .wrapper:hover .tooltiptext {
+    opacity: 1;
+  }
+
+  .switcher .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    /* At the bottom of the tooltip */
+    left: 25%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--clr-tooltip) transparent transparent transparent;
+  }
+</style>
