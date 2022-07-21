@@ -1,19 +1,27 @@
 ---
-// import Theme from "../Theme/Theme";
-import Theme from "../UI/Theme.astro";
-
 //styles
 import "../../styles/navbar.css";
+import "../../styles/btns.css";
 ---
 <nav>
-  <Theme />
+  <p class="question">can u gruvv?</p>
   <section class="links">
-    <a>ABOUT</a>
-    <a>EXPERIENCE</a>
-    <a>WORK</a>
-    <a>CONTACT</a>
+    <a href="#">
+      ABOUT<span class="red">(me)</span>
+    </a>
+    <a href="#">
+      <span class="green">...[</span>EXPERIENCE<span class="green">]</span>
+    </a>
+    <a href="#">
+      <span class="green">new </span>WORK<span class="yellow">()</span>
+    </a>
+    <a href="#">
+      ABOUT<span class="aqua">.call</span>
+    </a>
   </section>
-  <section>
-    <button>resume</button>
+  <section class="resume">
+    <a href="#" class="primary-orange-btn">
+      Resume
+    </a>
   </section>
 </nav>
