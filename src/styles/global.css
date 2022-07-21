@@ -16,24 +16,49 @@ a {
   /* gruv */
   --clr-gruv-bg: #282828;
   --clr-gruv-red: #cc241d;
+  --clr-gruv-orange: #d65d0e;
   --clr-gruv-green: #98971a;
   --clr-gruv-yellow: #d79921;
   --clr-gruv-blue: #458588;
   --clr-gruv-purple: #b16286;
   --clr-gruv-aqua: #689d6a;
   --clr-gruv-gray: #a89984;
-  --clr-gruv-orange: #d65d0e;
   /* general */
   --clr-light-gray: rgb(199, 199, 204);
   --clr-medium-gray: rgb(72, 72, 74);
-  
-
-	
-
-
 }
 
 body {
   background-color: var(--clr-gruv-bg);
   color: var(--clr-gruv-gray);
+}
+
+
+/* GENERAL COLORS CLASS */
+.red{
+  color: var(--clr-gruv-red);
+}
+
+.orange{
+  color: var(--clr-gruv-aqua);
+}
+
+.green{
+  color: var(--clr-gruv-green);
+}
+
+.yellow{
+  color: var(--clr-gruv-yellow);
+}
+
+.blue{
+  color: var(--clr-gruv-blue);
+}
+
+.purple{
+  color: var(--clr-gruv-purple);
+}
+
+.aqua{
+  color: var(--clr-gruv-aqua);
 }
