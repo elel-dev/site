@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "MemphisRiver";
+  src: url(/MemphisRiver.otf)
+}
+
 *,
 *::before,
 *::after {
