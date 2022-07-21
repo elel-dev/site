@@ -17,6 +17,13 @@ a {
   color: unset;
 }
 
+.content {
+  width: 82.5vw;
+  margin-left: 17.5vw;
+  padding: 5%;
+  padding-top: 15vh;
+}
+
 :root {
   /* gruv */
   --clr-gruv-bg: #282828;

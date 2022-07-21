@@ -1,18 +1,21 @@
 ---
 import MainHead from "../components/Layout/MainHead.astro";
+import Sidebar from "../components/Layout/Sidebar.astro";
+import Navbar from "../components/Layout/Navbar.astro";
 const {
   title,
   description
 } = Astro.props;
 ---
 <html lang="en">
-
-<head>
-  <MainHead title={title} description={description} />
-</head>
-
-<body>
-  <slot />
-</body>
-
+  <head>
+    <MainHead title={title} description={description} />
+  </head>
+  <body>
+    <Sidebar />
+    <Navbar />
+    <div class="content">
+      <slot />
+    </div>
+  </body>
 </html>
