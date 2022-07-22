@@ -1,0 +1,70 @@
+---
+import ContentLayout from "../../layouts/ContentLayout.astro";
+import { Icon } from "astro-icon";
+interface Props {
+  linkName: string;
+}
+const { linkName } = Astro.props as Props;
+---
+<ContentLayout>
+  <p id={linkName} class="decorator" slot="before">fn main() &#123</p>
+  <div class="middle" slot="middle">
+    <p class="salute aqua">Hi, my name is</p>
+    <h2 class="name">
+      <span class="orange">Lorenzo </span><span class="orange">Larghi</span>
+      <Icon name="italy" />
+    </h2>
+    <h3 class="welcome">
+      Welcome to my IDE (<span class="green">neovim</span>, btw)
+    </h3>
+    <p class="bio">I'm a software engineer exploring the brutal lands outside the comfortable TS kingdom. In the last
+      years, I have been building
+      digital services for private and instutiotional clients, while enjoying the web3 ride (I had fun, nothing more).
+    </p>
+    <a href="https://github.com/elel-dev" target="_blank" rel="noopener noreferrer" class="primary-orange-btn">
+      see what I do
+    </a>
+  </div>
+  <p class="decorator" slot="after">&#125</p>
+</ContentLayout>
+
+<style>
+  .salute {
+    font-size: clamp(var(--f-s), 5vw, var(--f-m));
+  }
+
+  .name {
+    margin: 1% 0;
+    font-size: clamp(30px, 7vw, 70px);
+    font-weight: bold;
+    position: relative;
+  }
+
+  [astro-icon="italy"] {
+    width: var(--icon-s);
+    height: var(--icon-s);
+    position: absolute;
+    top: 10%;
+    right: 57.5%;
+  }
+
+  .welcome {
+    font-size: clamp(30px, 5vw, 50px);
+  }
+
+  .bio {
+    width: 50%;
+    margin: 3% 0;
+    font-size: 20px;
+  }
+
+  .decorator {
+    font-size: var(--f-l);
+    margin: 2% 0;
+    user-select: none;
+  }
+
+  .middle {
+    padding-left: 10%;
+  }
+</style>
