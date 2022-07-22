@@ -17,13 +17,6 @@ a {
   color: unset;
 }
 
-.content {
-  width: var(--navbar-width);
-  margin-left: var(--sidebar-width);
-  padding: 5%;
-  padding-top: 15vh;
-}
-
 :root {
   /* gruv */
   --clr-gruv-bg: #282828;

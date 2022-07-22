@@ -14,8 +14,17 @@ const {
   <body>
     <Sidebar />
     <Navbar />
-    <div class="content">
+    <main class="main">
       <slot />
-    </div>
+    </main>
   </body>
 </html>
+
+<style>
+  .main {
+    width: var(--navbar-width);
+    margin-left: var(--sidebar-width);
+    padding: 5%;
+    padding-top: 15vh;
+  }
+</style>
