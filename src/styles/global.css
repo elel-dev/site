@@ -12,6 +12,10 @@
   font-family: "Roboto Condensed", sans-serif;
 }
 
+html {
+  scroll-padding-top: var(--navbar-scroll-offset); /* height of navbar + space */
+}
+
 a {
   text-decoration: none;
   color: unset;
@@ -37,6 +41,7 @@ a {
   --sidebar-height: 100vh;
   --navbar-width: 82.5vw;
   --navbar-height: 10vh;
+  --navbar-scroll-offset: 15vh; /* on page links */
   --layout-border: 1px solid var(--clr-gruv-gray);
   /* icons */
   --icon-s: 30px;
