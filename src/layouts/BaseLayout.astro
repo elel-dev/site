@@ -2,10 +2,14 @@
 import MainHead from "../components/Layout/MainHead.astro";
 import Sidebar from "../components/Layout/Sidebar.astro";
 import Navbar from "../components/Layout/Navbar.astro";
+interface Props {
+  title: string;
+  description: string;
+}
 const {
   title,
   description
-} = Astro.props;
+} = Astro.props as Props;
 ---
 <html lang="en">
   <head>
