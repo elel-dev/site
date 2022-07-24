@@ -1,0 +1,94 @@
+---
+import ContentLayout from "../../layouts/ContentLayout.astro";
+interface Props {
+  linkName: string;
+}
+const { linkName } = Astro.props as Props;
+---
+<ContentLayout link="about">
+  <p id={linkName} class="decorator" slot="before">const ABOUT = ( person: weirdShits[ ] ) =&gt &#123</p>
+  <div class="middle" slot="middle">
+    <div class="text">
+      <p>
+        <span class="aqua">Lorem, ipsum dolor sit amet consectetur </span>adipisicing elit. Fugit tenetur repudiandae
+        quis modi quo iste delectus
+        officiis, minima laboriosam reprehenderit, tempora esse nulla harum molestiae. Aperiam, deleniti! Pariatur, ex
+        libero! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit tenetur repudiandae quis modi quo iste
+        delectus officiis, minima laboriosam reprehenderit, tempora esse nulla harum molestiae. Aperiam, deleniti!
+        Pariatur, ex libero!
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit tenetur repudiandae quis modi quo iste delectus
+        officiis, minima laboriosam reprehenderit, tempora esse nulla harum molestiae. Aperiam, deleniti! Pariatur, ex
+        libero! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit tenetur repudiandae quis modi quo iste
+      </p>
+      <p>
+        libero! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit tenetur repudiandae quis modi quo iste
+      </p>
+      <ul class="tech-grid">
+        <li>NextJS</li>
+        <li>Docker</li>
+        <li>Kubernetes</li>
+        <li>AWS</li>
+        <li>Gin</li>
+        <li>Go Kit</li>
+        <li>tRPC</li>
+        <li>Actix</li>
+      </ul>
+    </div>
+    <div class="img">
+      <img src="https://i.imgur.com/w7Iqqao.jpeg" />
+    </div>
+  </div>
+  <p class="decorator" slot="after">&#125</p>
+</ContentLayout>
+
+<style>
+  .text {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10%;
+  }
+
+  .text p {
+    margin-bottom: 5%;
+    font-size: 20px;
+  }
+
+  .img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 30%;
+  }
+
+  .img img {
+    width: 100%;
+    border-radius: var(--b-radius);
+  }
+
+  .tech-grid {
+    width: 100%;
+    display: grid;
+    padding: 0 10%;
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .tech-grid li {
+    font-size: 20px;
+  }
+
+  .decorator {
+    font-size: var(--f-l);
+    margin: 2% 0;
+    user-select: none;
+  }
+
+  .middle {
+    padding-left: 10%;
+    display: flex;
+    width: 100%;
+  }
+</style>
