@@ -33,12 +33,6 @@ import Title from "../Title/Title";
       <Icon name="neovim" />
     </a>
   </section>
-  <section class="copyright">
-    <a href="#">
-      <Icon name="fork" />
-      <p>fork an awesome GRUVEE template</p>
-    </a>
-  </section>
 </aside>
 
 <style>
@@ -66,7 +60,7 @@ import Title from "../Title/Title";
 */
 
   .contacts {
-    height: 45vh;
+    height: 55vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -126,14 +120,15 @@ import Title from "../Title/Title";
     width: 100%;
     height: 30vh;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-around;
+    padding-bottom: 10%;
   }
 
   .social a {
     border-radius: 50%;
-    width: var(--icon-m);
-    height: var(--icon-m);
+    width: var(--icon-s);
+    height: var(--icon-s);
   }
 
   .social p {
@@ -162,40 +157,5 @@ import Title from "../Title/Title";
 
   .social a:hover [astro-icon="neovim"] {
     color: var(--clr-gruv-aqua);
-  }
-
-  /*
-*  =======
-*  SIDEBAR
-*  =======
-*/
-
-  .copyright {
-    width: 100%;
-    height: 5vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    user-select: none;
-  }
-
-  .copyright a {
-    padding: 2%;
-    height: 100%;
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .copyright a:hover {
-    transform: scale(1.1);
-    transition: --transition-s;
-    color: var(--clr-gruv-aqua);
-  }
-
-  .copyright a [astro-icon] {
-    height: var(--icon-s);
-    width: var(--icon-s);
   }
 </style>
