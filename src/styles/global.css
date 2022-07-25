@@ -32,6 +32,7 @@ a {
   --clr-gruv-purple: #b16286;
   --clr-gruv-aqua: #689d6a;
   --clr-gruv-gray: #a89984;
+  --clr-gruv-gray-opacity: rgba(168, 153, 132, 0.5);
   /* general */
   --clr-light-gray: rgb(199, 199, 204);
   --clr-medium-gray: rgb(72, 72, 74);
@@ -42,7 +43,7 @@ a {
   --navbar-width: 82.5vw;
   --navbar-height: 10vh;
   --navbar-scroll-offset: 15vh; /* on page links */
-  --layout-border: 1px solid var(--clr-gruv-gray);
+  --layout-border: 1px solid var(--clr-gruv-gray-opacity);
   /* icons */
   --icon-s: 30px;
   --icon-m: 40px;

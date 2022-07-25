@@ -7,11 +7,11 @@
     <a href="#about">
       ABOUT<span class="red">(me)</span>
     </a>
-    <a href="#experience">
-      <span class="green">...[</span>EXPERIENCE<span class="green">]</span>
-    </a>
     <a href="#work">
       <span class="green">new </span>WORK<span class="yellow">()</span>
+    </a>
+    <a href="#projects">
+      <span class="green">...[</span>PROJECTS<span class="green">]</span>
     </a>
     <a href="#contact">
       CONTACT<span class="aqua">.call</span>
@@ -36,11 +36,12 @@
     position: fixed;
     background-color: var(--clr-gruv-bg);
     z-index: 1;
+    border-bottom: var(--layout-border);
   }
 
   .question {
     position: absolute;
-    bottom: 5%;
+    bottom: 15%;
     left: 10%;
     font-size: var(--f-xl);
     font-family: "MemphisRiver";
@@ -49,23 +50,21 @@
   }
 
   .links {
-    margin: 0 2.5%;
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
-    border-bottom: var(--layout-border);
   }
 
   .links a {
-    font-size: var(--f-m);
-    margin: 0 2.5%;
-    padding: 2.5% 0;
+    font-size: var(--f-xs);
+    padding: 1%;
   }
 
   .links a span {
     opacity: 0;
     font-size: var(--f-xm);
     font-weight: bold;
+    font-style: italic;
   }
 
   .links a:hover span {
