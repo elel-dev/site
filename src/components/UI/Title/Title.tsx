@@ -1,5 +1,5 @@
 import React from "react";
-import GruvText from "../UI/GruvText/GruvText";
+import GruvText from "../GruvText/GruvText";
 
 //styles
 import Styles from "./title.module.css";
