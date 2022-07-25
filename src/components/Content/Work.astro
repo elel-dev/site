@@ -1,0 +1,50 @@
+---
+import ContentLayout from "../../layouts/ContentLayout.astro";
+import Works from "../UI/Works/Works";
+interface Props {
+  linkName: string;
+}
+const { linkName } = Astro.props as Props;
+---
+<ContentLayout>
+  <div id={linkName} class="decorator" slot="before">
+    <p>type WORK interface &#123</p>
+    <p class="interface">company: string</p>
+    <p class="interface">role: string</p>
+    <p class="interface">from-to: Date</p>
+    <p class="interface">tasks: Obsession[ ]</p>
+    <p class="blank"></p>
+    <p>&#125</p>
+  </div>
+  <div class="middle" slot="middle">
+    <Works />
+  </div>
+  <p class="decorator" slot="after"></p>
+</ContentLayout>
+
+<scrip>
+</scrip>
+
+<style>
+  .decorator {
+    font-size: var(--f-l);
+    margin: 2% 0;
+    user-select: none;
+    opacity: 0.5;
+    font-style: italic;
+  }
+
+  .interface {
+    padding-left: 5%;
+  }
+
+  .slider {
+    width: 100%;
+    background-color: red;
+  }
+
+  .middle {
+    display: flex;
+    width: 100%;
+  }
+</style>
