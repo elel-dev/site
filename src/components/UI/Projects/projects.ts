@@ -46,7 +46,7 @@ export const projectsList: Project[] = [
     stack: ["one", "two", "three", "four", "five", "six", "seven"],
     githubLink: "",
     liveLink: "",
-    imgPath: "/images/projects/cardio.jpg",
+    imgPath: "/images/projects/nano.jpg",
     featured: true,
   },
 ];
