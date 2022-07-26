@@ -13,7 +13,7 @@ const Works = () => {
   return (
     <div className={Styles.works}>
       {works.map((work: Work) => {
-        return <WorkCard work={work} />;
+        return <WorkCard key={work.company} work={work} />;
       })}
     </div>
   );

@@ -29,7 +29,7 @@ const Works: React.FC<Props> = ({ work }) => {
       </div>
       <ul className={Styles.description}>
         {description.map((desc: string) => {
-          return <li>{desc}</li>;
+          return <li key={desc}>{desc}</li>;
         })}
       </ul>
     </article>
