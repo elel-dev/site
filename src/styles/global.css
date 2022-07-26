@@ -24,6 +24,7 @@ a {
 :root {
   /* gruv */
   --clr-gruv-bg: #282828;
+  --clr-gruv-bg-dark: #232323;
   --clr-gruv-red: #cc241d;
   --clr-gruv-orange: #d65d0e;
   --clr-gruv-green: #98971a;

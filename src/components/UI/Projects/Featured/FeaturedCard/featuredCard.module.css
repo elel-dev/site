@@ -1,0 +1,93 @@
+.card {
+  position: relative;
+  margin: 0 2.5%;
+  width: 90%;
+  height: 350px;
+  margin-bottom: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.img {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  border-radius: var(--b-radius);
+  border: 1px solid var(--clr-gruv-bg);
+  z-index: 1;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--b-radius);
+  opacity: 0.25;
+  pointer-events: none;
+  transition: all ease 0.25s;
+}
+
+.img:hover img {
+  transform: scale(1.05);
+  opacity: 0.5;
+}
+
+.text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  text-align: end;
+}
+
+.featured {
+  padding: 0 1%;
+}
+
+.text h2 {
+  color: var(--clr-gruv-orange);
+  font-weight: bold;
+  font-size: var(--f-l);
+  margin: 1% 0;
+  padding: 0 1%;
+}
+
+.left.text {
+  align-items: flex-start;
+  text-align: start;
+}
+
+.description {
+  background-color: var(--clr-gruv-bg-dark);
+  max-width: 60%;
+  margin: 1% 0;
+  padding: 2%;
+  border-radius: var(--b-radius);
+  z-index: 2;
+}
+
+.stack {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  padding: 0 1%;
+}
+
+.right.text .stack {
+  justify-content: flex-end;
+}
+
+.right.text .stack p {
+  margin-left: 4%;
+}
+.left.text .stack p {
+  margin-right: 4%;
+}
