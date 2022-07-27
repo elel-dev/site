@@ -15,7 +15,7 @@ export interface Work {
 
 export const works: Work[] = [
   {
-    role: "Fullstack developer",
+    role: "Visiting student",
     company: "MIT",
     link: "https://cci.mit.edu/",
     from: "09-2022",
