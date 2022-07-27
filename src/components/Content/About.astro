@@ -93,4 +93,32 @@ const { linkName } = Astro.props as Props;
     display: flex;
     width: 100%;
   }
+
+  @media screen and (max-width: 1600px) {
+    .text {
+      width: 80%;
+    }
+
+    .img {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      width: 40%;
+      position: absolute;
+      top: 2.5%;
+      left: 20%;
+    }
+
+    .img img {
+      width: 100%;
+      border-radius: var(--b-radius);
+    }
+
+    .middle {
+      padding-top: 37.5%;
+      padding-left: 5%;
+      flex-direction: column;
+      position: relative;
+    }
+  }
 </style>

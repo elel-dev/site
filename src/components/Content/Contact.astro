@@ -10,7 +10,8 @@ const { linkName } = Astro.props as Props;
   <p id={linkName} class="decorator" slot="before">class CONTACT &#123</p>
   <div class="middle" slot="middle">
     <h2 class="touch">Get in touch</h2>
-    <p class="salute">Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem
+    <p class="salute">Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad
+      nisi Lorem
       pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud
       ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut
       officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris
@@ -113,4 +114,15 @@ const { linkName } = Astro.props as Props;
   .contact:hover:last-of-type [astro-icon="email"] {
     color: var(--clr-gruv-yellow);
   }
-</style>
+
+  @media screen and (max-width: 1300px) {
+    .contact {
+      width: 100%;
+    }
+
+    .salute {
+      padding: 5%;
+      margin: 5% 0;
+    }
+  }
+</style></style>

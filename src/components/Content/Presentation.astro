@@ -67,4 +67,16 @@ const { linkName } = Astro.props as Props;
   .middle {
     padding-left: 10%;
   }
+
+  @media screen and (max-width: 1000px) {
+    .bio {
+      width: 75%;
+      margin: 5% 0;
+      font-size: 20px;
+    }
+
+    .middle {
+      padding-left: 5%;
+    }
+  }
 </style>

@@ -1,3 +1,9 @@
  .featured {
    width: 100%;
  }
+
+@media screen and (max-width: 1000px) {
+  .featured {
+     padding-top: 5%;
+  }
+}
