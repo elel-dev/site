@@ -1,0 +1,116 @@
+---
+import ContentLayout from "../../layouts/ContentLayout.astro";
+import { Icon } from "astro-icon";
+interface Props {
+  linkName: string;
+}
+const { linkName } = Astro.props as Props;
+---
+<ContentLayout>
+  <p id={linkName} class="decorator" slot="before">class CONTACT &#123</p>
+  <div class="middle" slot="middle">
+    <h2 class="touch">Get in touch</h2>
+    <p class="salute">Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem
+      pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud
+      ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut
+      officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris
+      cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+      eiusmod.
+    </p>
+    <section class="contacts">
+      <a href="#" class="contact">
+        <Icon name="github" />
+        <h3>elel-dev</h3>
+      </a>
+      <a href="#" class="contact">
+        <Icon name="email" />
+        <h3>elel.develop@gmail.com</h3>
+      </a>
+      <a href="#" class="contact">
+        <Icon name="email" />
+        <h3>lorenzo.larghi@unifi.it</h3>
+      </a>
+    </section>
+  </div>
+  <p class="decorator" slot="after">&#125</p>
+</ContentLayout>
+
+<style>
+  .decorator {
+    font-size: var(--f-l);
+    margin: 2% 0;
+    user-select: none;
+    opacity: 0.5;
+    font-style: italic;
+  }
+
+  .middle {
+    padding-left: 10%;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .touch {
+    font-size: var(--f-xl);
+    color: var(--clr-gruv-orange);
+  }
+
+  .salute {
+    padding: 2.5%;
+    background-color: var(--clr-gruv-bg-dark);
+    text-align: center;
+    margin: 2.5% 0;
+  }
+
+  .contacts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact {
+    width: 45%;
+    margin-bottom: 1%;
+    display: flex;
+    align-items: center;
+    padding: 1%;
+    border: 1px solid var(--clr-gruv-bg);
+  }
+
+  .contact:hover {
+    border: 1px solid var(--clr-gruv-gray);
+    border-radius: var(--b-radius);
+    cursor: pointer;
+  }
+
+  .contact [astro-icon] {
+    height: var(--icon-s);
+    width: var(--icon-s);
+    margin: 0 5%;
+    transition: --transition-f;
+  }
+
+  .contact h3 {
+    font-size: var(--f-xs);
+  }
+
+  .contact:hover [astro-icon] {
+    transform: scale(1.1);
+  }
+
+  .contact:hover [astro-icon="github"] {
+    color: var(--clr-gruv-orange);
+  }
+
+  .contact:hover [astro-icon="email"] {
+    color: var(--clr-gruv-green);
+  }
+
+  .contact:hover:last-of-type [astro-icon="email"] {
+    color: var(--clr-gruv-yellow);
+  }
+</style>
