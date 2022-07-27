@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { GiJuggler, GiServerRack } from "react-icons/gi/index";
+import { BatteryFull, Servers, Research } from "./WorkIcons";
 
 type Description = [string, string, string];
 
@@ -25,7 +25,7 @@ export const works: Work[] = [
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
     ],
-    icon: <GiJuggler />, 
+    icon: <Research />
   },
   {
     role: "Backend & AI developer",
@@ -38,7 +38,7 @@ export const works: Work[] = [
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
     ],
-    icon: <GiServerRack />, 
+    icon: <Servers />,
   },
   {
     role: "Fullstack Developer",
@@ -51,6 +51,6 @@ export const works: Work[] = [
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
     ],
-    icon: <GiJuggler />, 
+    icon: <BatteryFull />,
   },
 ];
