@@ -39,7 +39,7 @@ a {
   --clr-medium-gray: rgb(72, 72, 74);
   --clr-tooltip: rgba(0, 0, 0, 0.5);
   /* layout */
-  --sidebar-width: 17.5vw;
+  --sidebar-width: 15vw;
   --sidebar-height: 100vh;
   --navbar-width: 82.5vw;
   --navbar-height: 10vh;
