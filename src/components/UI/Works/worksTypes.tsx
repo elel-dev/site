@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { GiJuggler, GiServerRack } from "react-icons/gi";
+import { GiJuggler, GiServerRack } from "react-icons/gi/index";
 
 type Description = [string, string, string];
 
