@@ -1,0 +1,32 @@
+---
+import { Icon } from "astro-icon";
+---
+<a href="#">
+  <Icon name="fork" />
+  <p>fork an awesome GRUVEE template</p>
+</a>
+
+<style>
+  a {
+    padding: 2%;
+    padding-bottom: 0.5%;
+    height: 100%;
+    width: 25%;
+    margin: 0 37.5%;
+    margin-bottom: -20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  a:hover {
+    transform: scale(1.1);
+    transition: --transition-s;
+    color: var(--clr-gruv-aqua);
+  }
+
+  a [astro-icon] {
+    height: var(--icon-s);
+    width: var(--icon-s);
+  }
+</style>
