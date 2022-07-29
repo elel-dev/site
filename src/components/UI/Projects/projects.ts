@@ -12,8 +12,14 @@ export const projectsList: Project[] = [
   {
     name: "W.A.F.E.R.",
     description:
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod.",
-    stack: ["one", "two", "three"],
+      "Agile and innovative platform for the analysis of facial expressions and ocular activity (eye gaze), for the detection of the emotional experience, with the possibility of versatile application and background execution. Currently in the validation phase, it will be used in parallel with traditional data collections and for specific custom applications",
+    stack: [
+      "TypeScript",
+      "TensorflowJs",
+      "MediaPipe",
+      "WebPack",
+      "Ridge Regression",
+    ],
     githubLink: "",
     liveLink: "",
     imgPath: "/images/projects/wafer.jpg",
@@ -22,8 +28,16 @@ export const projectsList: Project[] = [
   {
     name: "M.I.I.T.",
     description:
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
-    stack: ["one", "two", "three", "four", "five"],
+      "Videoconferencing platform enriched with artificial intelligence modules, for detecting the emotional experience of the participants; online station for psychosocial data mining and the innovative testing of collective intelligence (CI) emersion in small groups online interaction and problem solving activities. Current modules: gaze, facial expression, speech, activity.",
+    stack: [
+      "TypeScript",
+      "React",
+      "Express",
+      "MongoDB",
+      "WebSockets",
+      "WebRTC",
+      "TensorflowJS",
+    ],
     githubLink: "",
     liveLink: "",
     imgPath: "/images/projects/miit.jpg",
@@ -32,8 +46,8 @@ export const projectsList: Project[] = [
   {
     name: "CARDIODIARIO",
     description:
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia.",
-    stack: ["one", "two", "three"],
+      "In collaboration with the cardiology department of Careggi and Meyer hospitals of Florence, a mobile app platform for facilitating the therapeutic transition of cardiomyopathic patients, with automatic testing with scoring components and NLP for sentiment analysis.",
+    stack: ["React", "React Native", "Express", "MongoDB", ""],
     githubLink: "",
     liveLink: "",
     imgPath: "/images/projects/cardio.jpg",
@@ -42,8 +56,16 @@ export const projectsList: Project[] = [
   {
     name: "NANOVERSE AGENTS",
     description:
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
-    stack: ["one", "two", "three", "four", "five", "six", "seven"],
+      "Developed the first modular and upgradable GPT like virtual assistant (Alexa), uniquely customizable, in the blockchain ecosystem. Coded the core API, target of thousands of concurrent users on public demo launch. Word embedding for intent recognition to HF transformers (chat) and inhouse/external api actions, sentiment analysis & profanity filter.",
+    stack: [
+      "Express",
+      "PyTorch",
+      "TensorflowJS",
+      "AWS Lambda",
+      "Word Embeddings",
+      "Levenshtein Distance",
+      "HF Transformers",
+    ],
     githubLink: "",
     liveLink: "",
     imgPath: "/images/projects/nano.jpg",
