@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { BatteryFull, Servers, Research } from "./WorkIcons";
 
-type Description = [string, string, string];
+// type Description = [string, string, string];
 
 export interface Work {
   role: string;
@@ -9,9 +9,14 @@ export interface Work {
   link: string;
   from: string;
   to: string;
-  description: Description;
+  description: JSX.Element[];
   icon: ReactNode;
 }
+
+const linkStyle = {
+  borderBottom: "1px solid var(--clr-gruv-gray)",
+  fontStyle: "italic",
+};
 
 export const works: Work[] = [
   {
@@ -21,11 +26,33 @@ export const works: Work[] = [
     from: "09-2022",
     to: "03-2023",
     description: [
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
+      <p>
+        During my master the degree, I've been in contact with the{" "}
+        <a
+          style={linkStyle}
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://cci.mit.edu/"
+        >
+          Center for Collective Intelligence
+        </a>{" "}
+        of the Massachusetts Institute of Technology.
+      </p>,
+      <p>
+        Developing the next version of
+        <a
+          style={linkStyle}
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://cci.mit.edu/minglr/"
+        >
+          Minglr
+        </a>{" "}
+        , for my final thesis project: a videoconferencing platform enriched
+        with artificial intelligence modules.
+      </p>,
     ],
-    icon: <Research />
+    icon: <Research />,
   },
   {
     role: "Backend & AI developer",
@@ -34,9 +61,14 @@ export const works: Work[] = [
     from: "01-2022",
     to: "07-2022",
     description: [
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
+      <p>
+        Developed the first modular and upgradable GPT like virtual assistant
+        (Alexa), uniquely customizable, in the blockchain ecosystem.
+      </p>,
+      <p>
+        Coded the core API, target of thousands of concurrent users on public
+        demo launch.
+      </p>,
     ],
     icon: <Servers />,
   },
@@ -47,9 +79,18 @@ export const works: Work[] = [
     from: "09-2018",
     to: "01-2022",
     description: [
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-      "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
+      <p>Mutiple-year research grant as a young academic promise.</p>,
+      <p>
+        Development of web and mobile apps that bring together AI and
+        psychology.
+      </p>,
+      <p>
+        Collaboration with big institutional and private clients (see{" "}
+        <a style={linkStyle} href="#projects">
+          projects
+        </a>{" "}
+        ).
+      </p>,
     ],
     icon: <BatteryFull />,
   },
