@@ -39,7 +39,7 @@ export const works: Work[] = [
         of the Massachusetts Institute of Technology.
       </p>,
       <p>
-        Developing the next version of
+        Developing the next version of{" "}
         <a
           style={linkStyle}
           target="_blank"
@@ -62,8 +62,17 @@ export const works: Work[] = [
     to: "07-2022",
     description: [
       <p>
-        Developed the first modular and upgradable GPT like virtual assistant
-        (Alexa), uniquely customizable, in the blockchain ecosystem.
+        Developed the first modular and upgradable{" "}
+        <a
+          style={linkStyle}
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://projectnanopass.medium.com/phase-ii-litepaper-2fc4fd9f806"
+        >
+          GPT
+        </a>{" "}
+        like virtual assistant (Alexa), uniquely customizable, in the blockchain
+        ecosystem.
       </p>,
       <p>
         Coded the core API, target of thousands of concurrent users on public
