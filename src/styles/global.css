@@ -53,7 +53,7 @@ a {
   --transition-f: all ease 0.15s;
   --transition-s: all ease 0.25s;
   /* fonts */
-  --f-s: 1rem;
+  --f-s: 20px;
   --f-xs: 1.25rem;
   --f-m: 1.5rem;
   --f-xm: 1.75rem;

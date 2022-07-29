@@ -41,7 +41,7 @@
   color: var(--clr-gruv-green);
   border-bottom: 1px solid var(--clr-gruv-green);
   font-style: italic;
-  font-size: var(--f-xs);
+  font-size: var(--f-s);
 }
 
 .address .divider {
@@ -60,6 +60,7 @@
 
 .description p {
   margin-bottom: 1%;
+  font-size: var(--f-s);
 }
 
 @media screen and (max-width: 1700px) {

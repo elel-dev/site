@@ -46,6 +46,7 @@
   align-items: flex-end;
   justify-content: space-around;
   text-align: end;
+  font-size: var(--f-s);
 }
 
 .featured {
