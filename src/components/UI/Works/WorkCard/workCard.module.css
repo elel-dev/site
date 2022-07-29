@@ -26,7 +26,7 @@
 
 .card h2 {
   color: var(--clr-gruv-yellow);
-  font-size: var(--f-ll);
+  font-size: var(--f-l);
 }
 
 .address {
@@ -41,7 +41,7 @@
   color: var(--clr-gruv-green);
   border-bottom: 1px solid var(--clr-gruv-green);
   font-style: italic;
-  font-size: var(--f-m);
+  font-size: var(--f-xs);
 }
 
 .address .divider {
@@ -56,6 +56,10 @@
 
 .description {
   padding-left: 5%;
+}
+
+.description p {
+  margin-bottom: 1%;
 }
 
 @media screen and (max-width: 1700px) {

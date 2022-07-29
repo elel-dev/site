@@ -28,8 +28,8 @@ const Works: React.FC<Props> = ({ work }) => {
         </p>
       </div>
       <ul className={Styles.description}>
-        {description.map((desc: string) => {
-          return <li key={desc}>{desc}</li>;
+        {description.map((desc: JSX.Element) => {
+          return <li key={company}>{desc}</li>;
         })}
       </ul>
     </article>
