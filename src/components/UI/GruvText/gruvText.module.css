@@ -20,8 +20,8 @@
   color: var(--clr-gruv-aqua);
 }
 
-@media screen and (max-width: 400px){
-  .gruvText{
-    font-size: var(--f-m);
-  }
-}
+/* @media screen and (max-width: 400px){ */
+/*   .gruvText{ */
+/*     font-size: var(--f-m); */
+/*   } */
+/* } */
