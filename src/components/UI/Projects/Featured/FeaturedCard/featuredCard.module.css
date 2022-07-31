@@ -116,3 +116,27 @@
     margin-bottom: 40%;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .card {
+    margin-bottom: 25%;
+  }
+
+  .stack {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .description {
+    max-width: 80%;
+    width: 80%;
+  }
+
+  .img {
+    width: 80%;
+  }
+
+  .img img {
+    opacity: 0.10;
+  }
+}
