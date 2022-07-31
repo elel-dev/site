@@ -11,7 +11,7 @@ interface Props {
 }
 
 const FeaturedCard: React.FC<Props> = ({ project, index }) => {
-  const { stack, description, name, imgPath, liveLink } = project;
+  const { stack, description, name, imgPath, githubLink } = project;
 
   const isLeftView = index % 2 !== 0;
 
@@ -20,8 +20,8 @@ const FeaturedCard: React.FC<Props> = ({ project, index }) => {
 
   return (
     <article className={Styles.card}>
-      <a href={liveLink} className={imgStyle}>
-        <img src={imgPath} alt={imgPath.slice[-1]} />
+      <a href={githubLink} className={imgStyle}>
+        <img src={imgPath} alt={name} />
       </a>
       <div className={textStyle}>
         <p className={`aqua ${Styles.featured}`}>Featured project</p>
