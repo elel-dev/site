@@ -24,9 +24,6 @@ import { Icon } from "astro-icon";
       resume
     </a>
   </section>
-  <section class="hamburger-menu">
-    <Icon name="menu" />
-  </section>
 </nav>
 
 <style>
@@ -99,23 +96,29 @@ import { Icon } from "astro-icon";
   @media screen and (max-width: 400px) {
     nav {
       min-width: unset;
-      margin-left: var(--sidebar-width);
+      margin-left: 25vw;
       border-bottom: none;
-    }
-
-    .links {
-      display: none;
+      padding: 0;
+      width: 86%;
     }
 
     .resume {
       display: none;
     }
 
-    .hamburger-menu [astro-icon]{
-      width: var(--icon-s);
-      height: var(--icon-s);
-      cursor: pointer;
+    .links {
+      justify-content: space-around;
+      padding-left: 25%;
+    }
+
+    .links a {
+      font-size: var(--f-s);
+      padding: 0;
+    }
+
+    .links a span {
+      opacity: 0;
+      font-size: var(--f-xs);
     }
   }
-
 </style>
