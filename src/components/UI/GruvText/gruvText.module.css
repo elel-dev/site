@@ -22,6 +22,7 @@
 
 @media screen and (max-width: 400px){
   .gruvText{
-    font-size: var(--f-m);
+    font-size: var(--f-ll);
+    padding-left: 7.5%;
   }
 }
