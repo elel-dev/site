@@ -44,7 +44,7 @@ const GruvText: React.FC<Props> = (props) => {
   };
 
   return (
-    <p>
+    <p className={Styles.gruvText}>
       {divide(text, divider).map((char: string, index: number) => {
         return (
           <span key={`${index}_${char}`} className={getClass(index)}>
