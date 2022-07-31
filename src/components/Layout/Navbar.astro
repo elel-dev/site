@@ -1,5 +1,5 @@
 ---
-//
+import { Icon } from "astro-icon";
 ---
 <nav>
   <a href="#main" class="question">
@@ -23,6 +23,9 @@
     <a href={"/resume.pdf"} download={"resume.pdf"} class="primary-orange-btn">
       resume
     </a>
+  </section>
+  <section class="hamburger-menu">
+    <Icon name="menu" />
   </section>
 </nav>
 
@@ -92,4 +95,27 @@
       min-width: 740px;
     }
   }
+
+  @media screen and (max-width: 400px) {
+    nav {
+      min-width: unset;
+      margin-left: var(--sidebar-width);
+      border-bottom: none;
+    }
+
+    .links {
+      display: none;
+    }
+
+    .resume {
+      display: none;
+    }
+
+    .hamburger-menu [astro-icon]{
+      width: var(--icon-s);
+      height: var(--icon-s);
+      cursor: pointer;
+    }
+  }
+
 </style>
