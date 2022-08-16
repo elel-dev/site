@@ -47,7 +47,7 @@ export const projectsList: Project[] = [
     name: "CARDIODIARIO",
     description:
       "In collaboration with the cardiology department of Careggi and Meyer hospitals of Florence, a mobile app platform for facilitating the therapeutic transition of cardiomyopathic patients, with automatic testing with scoring components and NLP for sentiment analysis.",
-    stack: ["React", "React Native", "Express", "MongoDB", ""],
+    stack: ["React", "React Native", "Express", "PostgreSQL"],
     githubLink: "https://github.com/elel-dev/cardiodiario",
     liveLink: "",
     imgPath: "/images/projects/cardio.jpg",
