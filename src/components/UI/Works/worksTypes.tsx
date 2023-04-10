@@ -82,7 +82,7 @@ export const works: Work[] = [
   },
   {
     role: "Fullstack Developer",
-    company: "University of Florence",
+    company: "VirtHuLab",
     link: "https://www.forlilpsi.unifi.it/vp-328-virthulab-virtual-human-dynamics-laboratory.html",
     from: "09-2018",
     to: "01-2022",
