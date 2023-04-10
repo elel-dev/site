@@ -4,19 +4,10 @@ import Title from "../UI/Title/Title";
 ---
 <aside class="sidebar">
   <Title />
-  <section class="contacts">
-    <a href="https://github.com/elel-dev" target="_blank" rel="noopener noreferrer" class="contact">
-      <Icon name="github" />
-      <h2>elel-dev</h2>
-    </a>
-    <a href="mailto:elel.develop@gmail.com" class="contact">
-      <Icon name="email" />
-      <h3>elel.develop@gmail.com</h3>
-    </a>
-    <a href="mailto:lorenzo.larghi@unifi.it" class="contact">
-      <Icon name="email" />
-      <h3>lorenzo.larghi@unifi.it</h3>
-    </a>
+  <section class="filestree">
+    <div class="treeImgDiv">
+      <img src="/images/filestree.jpg" alt="portfolio_filestree_image"/>
+    </div>
   </section>
   <section class="social">
     <p>stuff</p>
@@ -50,65 +41,37 @@ import Title from "../UI/Title/Title";
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     border-right: var(--layout-border);
   }
 
   /*
 *  ========
-*  CONTACTS
+*  FILESTREE
 *  ========
 */
 
-  .contacts {
-    height: 55vh;
+  .filestree {
+    height: 70vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    pointer-events: none;
   }
 
-  .contact {
+  .treeImgDiv {
     width: 90%;
-    margin: 2% 0;
+    height: 100%;
     display: flex;
     align-items: center;
-    padding: 1.5%;
-    border: 1px solid var(--clr-gruv-bg);
+    justify-content: center;
   }
-
-  .contact:hover {
-    border: 1px solid var(--clr-gruv-gray);
-    border-radius: var(--b-radius);
-    cursor: pointer;
-  }
-
-  .contact [astro-icon] {
-    height: var(--icon-s);
-    width: var(--icon-s);
-    margin-right: 5%;
-    transition: --transition-f;
-  }
-
-  .contact h3 {
-    font-size: var(--f-xs);
-  }
-
-  .contact:hover [astro-icon] {
-    transform: scale(1.1);
-  }
-
-  .contact:hover [astro-icon="github"] {
-    color: var(--clr-gruv-orange);
-  }
-
-  .contact:hover [astro-icon="email"] {
-    color: var(--clr-gruv-green);
-  }
-
-  .contact:hover:last-of-type [astro-icon="email"] {
-    color: var(--clr-gruv-yellow);
+  
+  .treeImgDiv img {
+    width: 100%;
+    height: 100%;
   }
 
   /*
@@ -119,7 +82,7 @@ import Title from "../UI/Title/Title";
 
   .social {
     width: 100%;
-    height: 30vh;
+    height: 15;
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
