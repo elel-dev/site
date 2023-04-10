@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { BatteryFull, Servers, Research } from "./WorkIcons";
+import { BatteryFull, Research, Chat } from "./WorkIcons";
 
 // type Description = [string, string, string];
 
@@ -20,39 +20,38 @@ const linkStyle = {
 
 export const works: Work[] = [
   {
-    role: "Visiting student",
-    company: "MIT",
-    link: "https://cci.mit.edu/",
-    from: "09-2022",
-    to: "03-2023",
+    role: "Applied Researcher",
+    company: "LINKS Foundation",
+    link: "https://linksfoundation.com/en/",
+    from: "01-2023",
+    to: "02-2024",
     description: [
       <p>
-        During my master the degree, I've been in contact with the{" "}
-        <a
-          style={linkStyle}
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://cci.mit.edu/"
-        >
-          Center for Collective Intelligence
-        </a>{" "}
-        of the Massachusetts Institute of Technology.
+        Applied researcher in the field of Psychology & AI, for the creation of
+        softwares that foster pro-enviromental behaviours, using applications.
       </p>,
       <p>
-        Developing the next version of{" "}
-        <a
-          style={linkStyle}
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://cci.mit.edu/minglr/"
-        >
-          Minglr
-        </a>{" "}
-        , for my final thesis project: a videoconferencing platform enriched
-        with artificial intelligence modules.
+        Participation in many winning European Projects (HORIZON) proposals.
       </p>,
     ],
     icon: <Research />,
+  },
+  {
+    role: "ALEXA Developer",
+    company: "Vocalime",
+    link: "https://www.vocalime.com/",
+    from: "08-2022",
+    to: "10-2022",
+    description: [
+      <p>
+        Developer Alexa skills for an Amazon sub-contractor company, as part of
+        a technical internship.
+      </p>,
+      <p>
+        Tasks: conversational designer, API, Jovo framework contributions...
+      </p>,
+    ],
+    icon: <Chat />,
   },
   {
     role: "Backend & AI developer",
@@ -79,7 +78,7 @@ export const works: Work[] = [
         demo launch.
       </p>,
     ],
-    icon: <Servers />,
+    icon: <Chat />,
   },
   {
     role: "Fullstack Developer",
@@ -92,13 +91,6 @@ export const works: Work[] = [
       <p>
         Development of web and mobile apps that bring together AI and
         psychology.
-      </p>,
-      <p>
-        Collaboration with big institutional and private clients (see{" "}
-        <a style={linkStyle} href="#projects">
-          projects
-        </a>{" "}
-        ).
       </p>,
     ],
     icon: <BatteryFull />,
