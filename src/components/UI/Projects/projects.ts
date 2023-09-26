@@ -58,7 +58,6 @@ export const projectsList: Project[] = [
     description:
       "Developed the first modular and upgradable GPT like virtual assistant (Alexa), uniquely customizable, in the blockchain ecosystem. Coded the core API, target of thousands of concurrent users on public demo launch. Word embedding for intent recognition to HF transformers (chat) and inhouse/external api actions, sentiment analysis & profanity filter.",
     stack: [
-      "Express",
       "PyTorch",
       "TensorflowJS",
       "AWS Lambda",
@@ -69,6 +68,16 @@ export const projectsList: Project[] = [
     githubLink: "https://github.com/elel-dev/agents",
     liveLink: "",
     imgPath: "/images/projects/nano.jpg",
+    featured: true,
+  },
+  {
+    name: "INCIT-EV",
+    description:
+      "Demonstrate an innovative set of charging infrastructures, technologies and its associated business models. Developed a DSS tool to support decision makers design and evaluate scenarios of charging infrastructure deployment using cost-benefit analysis (CBA) approach.",
+    stack: ["Python", "FastAPI", "MongoDb", "PostgreSQL", "Java", "Kubernetes"],
+    githubLink: "https://www.incit-ev.eu/",
+    liveLink: "https://www.incit-ev.eu/",
+    imgPath: "/images/projects/incitev.jpg",
     featured: true,
   },
 ];

@@ -6,17 +6,27 @@ interface Props {
 }
 const { linkName } = Astro.props as Props;
 ---
+
 <ContentLayout>
   <p id={linkName} class="decorator" slot="before">class CONTACT &#123</p>
   <div class="middle" slot="middle">
     <h2 class="touch">Get in touch</h2>
     <p class="salute">
-      Currently employed <a href="https://linksfoundation.com/en" target="_blank" rel="noopener noreferrer"><span class="aqua">@linksfoundation</span></a>, so I'm not actively searching for a job opportunity.
-      I enjoy coding more than everything else, so if you have an idea that you think I might like, please contact me through the channels below.
-      I'm always down for some trickyaibullshitweb3app.
+      Currently employed <a
+        href="https://linksfoundation.com/en"
+        target="_blank"
+        rel="noopener noreferrer"><span class="aqua">@linksfoundation</span></a
+      >. I enjoy coding more than everything else, so if you have an idea that
+      you think I might like, please contact me through the channels below. I'm
+      always down for some trickyaibullshitweb3app.
     </p>
     <section class="contacts">
-      <a href="https://github.com/elel-dev" target="_blank" rel="noopener noreferrer" class="contact">
+      <a
+        href="https://github.com/elel-dev"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact"
+      >
         <Icon name="github" />
         <h3>elel-dev</h3>
       </a>

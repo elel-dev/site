@@ -5,21 +5,28 @@ interface Props {
 }
 const { linkName } = Astro.props as Props;
 ---
+
 <ContentLayout>
   <p id={linkName} class="decorator" slot="before">fn main() &#123</p>
   <div class="middle" slot="middle">
     <p class="salute aqua">Hi, my name is</p>
     <h2 class="name">
-      <span class="orange">Lorenzo </span><span class="orange">Larghi</span>
+      <span class="orange">Lorenzo</span><span class="orange"> Larghi</span>
     </h2>
     <h3 class="welcome">
       Welcome to my IDE (<span class="green">neovim</span>, btw)
     </h3>
-    <p class="bio">I'm a software engineer exploring the brutal lands outside the comfortable TS kingdom. In the last
-      years, I have been building
-      digital services for private and instutiotional clients, while enjoying the web3 ride (I had fun, nothing more).
+    <p class="bio">
+      I'm a software engineer and a graduate in psychology. In the last years,
+      I've been building digital services for private and institutional clients,
+      focusing on AI&BLK applications for citizens.
     </p>
-    <a href="https://github.com/elel-dev" target="_blank" rel="noopener noreferrer" class="primary-orange-btn">
+    <a
+      href="https://github.com/elel-dev"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="primary-orange-btn"
+    >
       see what I do
     </a>
   </div>
@@ -51,7 +58,7 @@ const { linkName } = Astro.props as Props;
   }
 
   .bio {
-    width: 50%;
+    width: 65%;
     margin: 3% 0;
     font-size: 20px;
   }

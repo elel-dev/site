@@ -5,29 +5,41 @@ interface Props {
 }
 const { linkName } = Astro.props as Props;
 ---
+
 <ContentLayout>
-  <p id={linkName} class="decorator" slot="before">const ABOUT = (person: problems[ ]) =&gt &#123</p>
+  <p id={linkName} class="decorator" slot="before">
+    const ABOUT = (person: problems[ ]) =&gt &#123
+  </p>
   <div class="middle" slot="middle">
     <div class="text">
       <p>
-        <span class="orange">Hi there, nice to meet you!</span> Welcome to my IDE, this is what I see for 15 hours a
-        day: <span class="yellow">PURE GRUV</span>.
+        <span class="orange">Hi there</span>, nice to meet you! Welcome to my
+        IDE, this is what I see for 15 hours a day: <span class="yellow"
+          >PURE GRUV</span
+        >.
       </p>
       <p>
-        I hold a Master Degree in <span class="aqua">Digital Health Psychology</span> and I'm a <span
-          class="red">full-stack developer</span>, with solid experience in <span class="yellow">Artificial
-        Intelligence</span> and academic research: my focus so far was the creation of digital services in which to bring
-        these areas together in innovative solutions.
+        I hold a bachelor degree in <span class="aqua"
+          >Digital Health Psychology</span
+        > and a master in <span class="aqua">Artificial Intelligence</span>
+         : my focus so far was the creation of digital services in which to
+        bring these areas together in innovative solutions.
       </p>
-      <p>These are some of the latest tech I've worked with: uselessly <span class="aqua">k8-microservicing</span>
-        for no good reason and <span class="purple">TS</span> backend <span class="purple">alternatives</span>.</p>
+      <p>
+        These are some of the latest tech I've worked with: uselessly <span
+          class="aqua">k8-microservicing</span
+        >
+         for no good reason and <span class="purple">TS</span> backend <span
+          class="purple">alternatives</span
+        >.
+      </p>
       <ul class="tech-grid">
         <li>NextJS</li>
         <li>Docker</li>
         <li>Kubernetes</li>
         <li>AWS</li>
         <li>Gin</li>
-        <li>Go Kit</li>
+        <li>Leptos</li>
         <li>tRPC</li>
         <li>Actix</li>
       </ul>

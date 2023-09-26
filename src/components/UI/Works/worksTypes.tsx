@@ -20,21 +20,22 @@ const linkStyle = {
 
 export const works: Work[] = [
   {
-    role: "Applied Researcher",
+    role: "Senior Fullstack developer",
     company: "LINKS Foundation",
     link: "https://linksfoundation.com/en/",
     from: "01-2023",
-    to: "02-2024",
+    to: "current",
     description: [
       <p>
-        Applied researcher in the field of Psychology & AI, for the creation of
-        softwares that foster pro-enviromental behaviours, using applications.
+        Coded in seven different codebases, with multiple stacks and
+        architectures.
       </p>,
       <p>
-        Participation in many winning European Projects (HORIZON) proposals.
+        PM for European project proposals, system design, code reviews,
+        mentorship of junior hires.
       </p>,
     ],
-    icon: <Research />,
+    icon: <BatteryFull />,
   },
   {
     role: "ALEXA Developer",
@@ -43,10 +44,7 @@ export const works: Work[] = [
     from: "08-2022",
     to: "10-2022",
     description: [
-      <p>
-        Developer Alexa skills for an Amazon sub-contractor company, as part of
-        a technical internship.
-      </p>,
+      <p>Developed Alexa skills for an Amazon sub-contractor company.</p>,
       <p>
         Tasks: conversational designer, API, Jovo framework contributions...
       </p>,
@@ -61,17 +59,16 @@ export const works: Work[] = [
     to: "07-2022",
     description: [
       <p>
-        Developed the first modular and upgradable{" "}
+        Developed the first{" "}
         <a
           style={linkStyle}
           target="_blank"
           rel="noopener noreferrer"
           href="https://projectnanopass.medium.com/phase-ii-litepaper-2fc4fd9f806"
         >
-          GPT
+          GPT like
         </a>{" "}
-        like virtual assistant (Alexa), uniquely customizable, in the blockchain
-        ecosystem.
+        customizable virtual assistant (Alexa) in the blockchain ecosystem.
       </p>,
       <p>
         Coded the core API, target of thousands of concurrent users on public
