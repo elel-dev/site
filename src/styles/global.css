@@ -36,7 +36,7 @@ a {
   /* layout */
   --sidebar-width: 15vw;
   --sidebar-height: 100vh;
-  --navbar-width: 85vw;
+  --navbar-width: 84vw;
   --navbar-height: 10vh;
   --navbar-scroll-offset: 15vh; /* on page links */
   --layout-border: 1px solid var(--clr-gruv-gray-opacity);
