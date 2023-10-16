@@ -44,6 +44,16 @@ export const projectsList: Project[] = [
     featured: true,
   },
   {
+    name: "VIM-ASTRO",
+    description:
+      "A [n]vim syntax plugin for .astro files. When there's no LSP installed, a syntax highlighting plugin enables Vim to show parts of the text in another font or color. Those parts can be specific keywords or text matching a pattern.",
+    stack: ["Vim", "Neovim", "vim-plug", "vimscripts"],
+    githubLink: "https://github.com/elel-dev/vim-astro-syntax",
+    liveLink: "",
+    imgPath: "/images/projects/vimastro.jpg",
+    featured: true,
+  },
+  {
     name: "CARDIODIARIO",
     description:
       "In collaboration with the cardiology department of Careggi and Meyer hospitals of Florence, a mobile app platform for facilitating the therapeutic transition of cardiomyopathic patients, with automatic testing with scoring components and NLP for sentiment analysis.",
