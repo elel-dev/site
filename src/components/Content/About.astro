@@ -1,5 +1,6 @@
 ---
 import ContentLayout from "../../layouts/ContentLayout.astro";
+import Icon from "astro-icon";
 interface Props {
   linkName: string;
 }
@@ -11,41 +12,48 @@ const { linkName } = Astro.props as Props;
     const ABOUT = (person: problems[ ]) =&gt &#123
   </p>
   <div class="middle" slot="middle">
-    <div class="text">
+    <div class="text text-right">
       <p>
         <span class="orange">Hi there</span>, nice to meet you! Welcome to my
         IDE, this is what I see for 15 hours a day: <span class="yellow"
-          >PURE GRUV</span
+          ><a href="https://github.com/morhetz/gruvbox" target="_blank" rel="noopener noreferrer">#gruv</a></span
         >.
       </p>
       <p>
-        I hold a bachelor degree in <span class="aqua"
-          >Digital Health Psychology</span
-        > and a master in <span class="aqua">Artificial Intelligence</span>
-         : my focus so far was the creation of digital services in which to
-        bring these areas together in innovative solutions.
+        I hold a bacheloer degree in <span class="aqua">Computer Science</span> and a master in <span class="aqua">Artificial Intelligence</span>.
+        I've also explored some pyschology/HCI concepts in a few courses.
+        Here you can find a nice <span class="purple">TLDR</span>, but in the upper right corner you can also download my CV.
       </p>
       <p>
-        These are some of the latest tech I've worked with: uselessly <span
-          class="aqua">k8-microservicing</span
-        >
-         for no good reason and <span class="purple">TS</span> backend <span
-          class="purple">alternatives</span
-        >.
+         <span style="font-style:italic" class="purple">Languages</span>:  Typescript, Rust, Python, Go, Solidity, Perl, Java, Ruby.
+         <span style="font-style:italic" class="purple">Experience</span>: React, React Native, SolidJS, VueJS, NextJs, Deno, NestJS, Django, HardHat, Truffle, TensorFlow, TensorFlowJs, PyTorch, Electron, Tamui, Netlify, Heroku, RabbitMQ, Redis, MongoDB, GraphQL, Leptos, Postgresql, FastAPI, Astro, Bun, Actix, Diesel, Docker. Kubernetes, AWS, CI/CD, Fly...
       </p>
-      <ul class="tech-grid">
-        <li>NextJS</li>
-        <li>Docker</li>
-        <li>Kubernetes</li>
-        <li>AWS</li>
-        <li>Gin</li>
-        <li>Leptos</li>
-        <li>tRPC</li>
-        <li>Actix</li>
-      </ul>
     </div>
     <div class="img">
       <img alt="profile picture" src="/images/foto_lore.jpeg" />
+    </div>
+  </div>
+  <div class="middle" slot="middle">
+    <div class="img">
+      <img alt="profile picture" src="/images/stand.jpeg" />
+    </div>
+    <div class="text text-left">
+      <p>
+        I don't always work like this, but this picture really speaks <span class="aqua">about me</span>. This is when I'm the most
+        <span class="orange">happy</span>: in my little house, plants and my <span class="red">Italian style</span> making do.
+      </p>
+      <p>Other few details about me.</p>
+      <p>
+        1) Yes, you saw right, I don't need a mouse, because <span class="yellow">I use neovim btw</span>.<br>
+        2) I hate to use external libraries: you will see me mantain <span class="orange">in-house libraries</span> for all those little things.<br>
+        3) For this, I love to develop internal tools or DX related software.
+      </p>
+      <div class="logos">
+        <Icon name="ts" />
+        <Icon name="neovim" />
+        <Icon name="rust" />
+        <Icon name="tailwind" />
+      </div>
     </div>
   </div>
   <p class="decorator" slot="after">&#125</p>
@@ -53,11 +61,18 @@ const { linkName } = Astro.props as Props;
 
 <style>
   .text {
-    width: 40%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 10%;
+    text-align: justify;
+  }
+
+  .text-right {
+    margin-right: 2.5%;
+  }
+  .text-left {
+    margin-left: 2.5%;
   }
 
   .text p {
@@ -77,16 +92,18 @@ const { linkName } = Astro.props as Props;
     border-radius: var(--b-radius);
   }
 
-  .tech-grid {
+  .logos {
     width: 100%;
-    display: grid;
-    padding: 0 10%;
-    grid-template-columns: auto auto auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .tech-grid li {
-    font-size: 20px;
+  [astro-icon] {
+    width: 3rem;
+    margin: 0 2%;
   }
+
 
   .decorator {
     font-size: var(--f-l);
@@ -100,6 +117,7 @@ const { linkName } = Astro.props as Props;
     padding-left: 10%;
     display: flex;
     width: 100%;
+    margin-bottom: 1%;
   }
 
   @media screen and (max-width: 1600px) {
