@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { BatteryFull, Research, Chat } from "./WorkIcons";
+import { BatteryFull, Chat, Servers } from "./WorkIcons";
 
 // type Description = [string, string, string];
 
@@ -20,14 +20,32 @@ const linkStyle = {
 
 export const works: Work[] = [
   {
-    role: "Senior Fullstack developer",
+    role: "Backend developer",
+    company: "SHAPE",
+    link: "https://shape.dk",
+    from: "01-2023",
+    to: "12-2023",
+    description: [
+      <p>
+        Award winning mobile app studio, with prestigious clients (Apple, IKEA,
+        OK, ATOS..)
+      </p>,
+      <p>
+        Legacy code mantainer in external clients projects and backend/devops
+        engineer in the app development team.
+      </p>,
+    ],
+    icon: <Servers />,
+  },
+  {
+    role: "Fullstack developer",
     company: "LINKS Foundation",
     link: "https://linksfoundation.com/en/",
     from: "01-2023",
-    to: "current",
+    to: "12-2023",
     description: [
       <p>
-        Coded in seven different codebases, with multiple stacks and
+        Coded most services in different projects, with different stacks and
         architectures.
       </p>,
       <p>
