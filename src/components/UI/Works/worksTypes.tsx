@@ -23,8 +23,8 @@ export const works: Work[] = [
     role: "Backend developer",
     company: "SHAPE",
     link: "https://shape.dk",
-    from: "01-2023",
-    to: "12-2023",
+    from: "12-2023",
+    to: "current",
     description: [
       <p>
         Award winning mobile app studio, with prestigious clients (Apple, IKEA,
