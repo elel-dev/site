@@ -21,39 +21,41 @@ const linkStyle = {
 export const works: Work[] = [
   {
     role: "Backend developer",
-    company: "SHAPE",
-    link: "https://shape.dk",
-    from: "12-2023",
+    company: "OK",
+    link: "https://ok.dk",
+    from: "11-2023",
     to: "current",
     description: [
       <p>
-        Award winning mobile app studio, with prestigious clients (Apple, IKEA,
-        OK, ATOS..)
+        Developed PubSub services for the real time monitor of energy and fueling transactions.
       </p>,
       <p>
-        Legacy code mantainer in external clients projects and backend/devops
-        engineer in the app development team.
+        Increased delivery latency health by 50%, by tweaking EF db calls performance.
+      </p>,
+      <p>
+        CI/CD pipelines maintainer; DataDog team for better observability.
       </p>,
     ],
     icon: <Servers />,
   },
   {
-    role: "Fullstack developer",
+    role: "Backend developer",
     company: "LINKS Foundation",
     link: "https://linksfoundation.com/en/",
     from: "01-2023",
-    to: "12-2023",
+    to: "11-2023",
     description: [
       <p>
-        Coded most services in different projects, with different stacks and
-        architectures.
+        On-prem Linux system administration and maintainer of different deeptech services.
       </p>,
       <p>
-        PM for European project proposals, system design, code reviews,
-        mentorship of junior hires.
+        PM for European project proposals, system design, code reviews, mentorship of junior hires
+      </p>,
+      <p>
+        Secured funding through successful grant application and technical delivery (INCIT-EV).
       </p>,
     ],
-    icon: <BatteryFull />,
+    icon: <Servers />,
   },
   {
     role: "ALEXA Developer",
@@ -70,7 +72,7 @@ export const works: Work[] = [
     icon: <Chat />,
   },
   {
-    role: "Backend & AI developer",
+    role: "Backend Developer",
     company: "NANOVERSE HQ",
     link: "https://www.nanopass.io/",
     from: "01-2022",
@@ -93,7 +95,7 @@ export const works: Work[] = [
         demo launch.
       </p>,
     ],
-    icon: <Chat />,
+    icon: <Servers />,
   },
   {
     role: "Fullstack Developer",

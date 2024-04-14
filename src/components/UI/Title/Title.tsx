@@ -10,7 +10,7 @@ const Title = () => {
       <a href="/" className={Styles.title}>
         <GruvText text="ELEL" divider={1} startFrom={1} />
       </a>
-      <h3 className={Styles.subTtile}>FULL&AI DEVELOPER</h3>
+      <h3 className={Styles.subTtile}>BACK&AI DEVELOPER</h3>
     </section>
   );
 };
