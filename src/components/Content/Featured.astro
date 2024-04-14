@@ -1,57 +1,59 @@
 ---
 import ContentLayout from "../../layouts/ContentLayout.astro";
-import Featured from "../UI/Projects/Featured/Featured";
+import FeaturedWorks from "../UI/Projects/Featured/Featured";
 interface Props {
   linkName: string;
 }
 const { linkName } = Astro.props as Props;
 ---
+
 <ContentLayout>
   <div id={linkName} class="decorator" slot="before">
     var experiences = make([ ]project, tooMany
   </div>
   <div class="middle" slot="middle">
-    <Featured />
-    <div class="other">
-      <h2>Other Noteworthy Projects</h2>
-      <a href="#">view the archive</a>
-    </div>
+    <FeaturedWorks>
+      <div class="other">
+        <h2>Other Noteworthy Projects</h2>
+        <a href="#">view the archive</a>
+      </div>
+    </FeaturedWorks>
+    <p class="decorator" slot="after">)</p>
   </div>
-  <p class="decorator" slot="after">)</p>
+
+  <style>
+    .decorator {
+      font-size: var(--f-l);
+      margin: 2% 0;
+      user-select: none;
+      opacity: 0.5;
+      font-style: italic;
+    }
+
+    .other {
+      margin-top: 10%;
+      widows: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .other a {
+      color: var(--clr-gruv-aqua);
+      border-bottom: 1px solid var(--clr-gruv-aqua);
+    }
+
+    .interface {
+      padding-left: 5%;
+    }
+    .blank {
+      margin: 1% 0;
+    }
+
+    .middle {
+      width: 100%;
+      padding-left: 2.5%;
+    }
+  </style>
 </ContentLayout>
-
-<style>
-  .decorator {
-    font-size: var(--f-l);
-    margin: 2% 0;
-    user-select: none;
-    opacity: 0.5;
-    font-style: italic;
-  }
-
-  .other {
-    margin-top: 10%;
-    widows: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:space-around;
-  }
-
-  .other a {
-    color: var(--clr-gruv-aqua);
-    border-bottom: 1px solid var(--clr-gruv-aqua);
-  }
-
-  .interface {
-    padding-left: 5%;
-  }
-  .blank{
-    margin: 1% 0;
-  }
-
-  .middle {
-    width: 100%;
-    padding-left: 2.5%;
-  }
-</style>

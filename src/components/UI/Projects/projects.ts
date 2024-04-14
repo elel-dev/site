@@ -84,10 +84,27 @@ export const projectsList: Project[] = [
     name: "INCIT-EV",
     description:
       "Demonstrate an innovative set of charging infrastructures, technologies and its associated business models. Developed a DSS tool to support decision makers design and evaluate scenarios of charging infrastructure deployment using cost-benefit analysis (CBA) approach.",
-    stack: ["Python", "FastAPI", "MongoDb", "PostgreSQL", "Java", "Kubernetes"],
+    stack: [
+      "Python",
+      "FastAPI",
+      "MongoDb",
+      "PostgreSQL",
+      "DockerRegistry",
+      "Linux on-prem",
+    ],
     githubLink: "https://www.incit-ev.eu/",
     liveLink: "https://www.incit-ev.eu/",
     imgPath: "/images/projects/incitev.jpg",
+    featured: true,
+  },
+  {
+    name: "OK",
+    description:
+      "Developed PubSub services for the real time monitor of energy and fueling transactions.  Increased delivery latency health by 50%, by tweaking EF db calls performance.  CI/CD pipelines maintainer; DataDog team for better observability.",
+    stack: ["ASPNET", "PostgreSQL", "Kubernetes", "Datadog", "ArgoCD"],
+    githubLink: "https://www.ok.dk/",
+    liveLink: "https://www.ok.dk/",
+    imgPath: "/images/projects/ok.jpg",
     featured: true,
   },
 ];
