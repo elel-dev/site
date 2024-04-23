@@ -21,8 +21,8 @@ const linkStyle = {
 export const works: Work[] = [
   {
     role: "Backend developer",
-    company: "OK",
-    link: "https://ok.dk",
+    company: "SHAPE",
+    link: "https://shape.dk",
     from: "11-2023",
     to: "current",
     description: [

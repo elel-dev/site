@@ -6,11 +6,9 @@ interface Props {
   title: string;
   description: string;
 }
-const {
-  title,
-  description
-} = Astro.props as Props;
+const { title, description } = Astro.props as Props;
 ---
+
 <html lang="en">
   <head>
     <MainHead title={title} description={description} />
@@ -21,23 +19,21 @@ const {
     <main class="main">
       <slot />
     </main>
-  </body>
-</html>
-
-<style>
-  .main {
-    width: var(--navbar-width);
-    margin-left: var(--sidebar-width);
-    padding: 5%;
-    padding-top: 15vh;
-  }
-
-  @media screen and (max-width: 400px) {
+  </body><style>
     .main {
-      padding: 0;
-      padding-top: 10vh;
-      margin-left: 25vw;
-      width: 600px;
+      width: var(--navbar-width);
+      margin-left: var(--sidebar-width);
+      padding: 5%;
+      padding-top: 15vh;
     }
-  }
-</style>
+
+    @media screen and (max-width: 500px) {
+      .main {
+        padding: 0;
+        padding-top: 10vh;
+        margin-left: 25vw;
+        width: 600px;
+      }
+    }
+  </style>
+</html>
