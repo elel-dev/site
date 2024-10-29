@@ -74,7 +74,7 @@ export const works: Work[] = [
   {
     role: "Backend Developer",
     company: "NANOVERSE HQ",
-    link: "https://www.nanopass.io/",
+    link: "https://opensea.io/collection/nano-agents",
     from: "01-2022",
     to: "07-2022",
     description: [
