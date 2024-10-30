@@ -1,0 +1,93 @@
+---
+import ContentLayout from "../../layouts/ContentLayout.astro";
+import FeaturedWorks from "../UI/Projects/Featured/Featured";
+interface Props {
+  linkName: string;
+}
+const { linkName } = Astro.props as Props;
+---
+
+<ContentLayout>
+  <div id={linkName} class="decorator" slot="before">
+    <span> </span>char talks[] = &#123
+  </div>
+  <div class="middle" slot="middle">
+    <h2>Building observable-first event driven architectures</h2>
+    <a href="https://www.instagram.com/framnastudios/reel/DATFYpItFzf/">
+      <h3>@FRAMNACON 2024</h3>
+    </a>
+    <p class="description">
+      Putting observability at the core of designing, deploying, and managing
+      applications allows teams to communicate better and proactively monitor
+      and optimize complex event flows, making systems more resilient and
+      scalable. Tools like Datadog play a critical role enabling real-time
+      insights and streamlined troubleshooting across distributed systems.
+    </p>
+    <img class="talk-img" src="/images/talk_framnacon.jpeg" />
+  </div>
+  <p class="decorator" slot="after">&#125</p>
+</ContentLayout>
+
+<style>
+  .decorator {
+    font-size: var(--f-l);
+    margin: 2% 0;
+    user-select: none;
+    opacity: 0.5;
+    font-style: italic;
+  }
+
+  .other {
+    margin-top: 10%;
+    widows: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .middle h2 {
+    color: var(--clr-gruv-orange);
+    font-weight: bold;
+    font-size: var(--f-l);
+    margin-top: 1%;
+    padding: 0 1%;
+  }
+
+  .middle a h3 {
+    color: var(--clr-gruv-aqua);
+    padding: 0 1%;
+    font-style: italic;
+  }
+
+  .middle .talk-img {
+    border-radius: 1%;
+    width: 50%;
+  }
+
+  .middle .description {
+    background-color: var(--clr-gruv-bg-dark);
+    max-width: 60%;
+    margin: 1% 0;
+    padding: 2%;
+    border-radius: var(--b-radius);
+    z-index: 2;
+  }
+
+  .other a {
+    color: var(--clr-gruv-aqua);
+    border-bottom: 1px solid var(--clr-gruv-aqua);
+  }
+
+  .interface {
+    padding-left: 5%;
+  }
+  .blank {
+    margin: 1% 0;
+  }
+
+  .middle {
+    width: 100%;
+    padding-left: 2.5%;
+  }
+</style>
