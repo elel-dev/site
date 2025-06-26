@@ -1,0 +1,68 @@
+---
+//astro
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Presentation from "../components/Content/Presentation.astro";
+import About from "../components/Content/About.astro";
+import Work from "../components/Content/Work.astro";
+import Featured from "../components/Content/Featured.astro";
+import Contact from "../components/Content/Contact.astro";
+import Copyright from "../components/Content/Copyright.astro";
+import Talks from "../components/Content/Talks.astro";
+import Articles from "../components/Content/Articles.astro";
+---
+
+<BaseLayout title="Lorenzo Larghi - IDE Mode" description="Developer-focused portfolio experience">
+  <div class="theme-header">
+    <a href="/" class="back-button">← Choose Theme</a>
+    <h1 class="theme-title">IDE Mode</h1>
+  </div>
+  
+  <Presentation linkName="main" />
+  <About linkName="about" />
+  <Work linkName="work" />
+  <Featured linkName="projects" />
+  <Talks linkName="talks" />
+  <Articles linkName="articles" />
+  <Contact linkName="contact" />
+  <Copyright />
+</BaseLayout>
+
+<style>
+  .theme-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--clr-gruv-gray-opacity);
+  }
+
+  .back-button {
+    color: var(--clr-gruv-blue);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: var(--transition-s);
+    padding: 0.5rem 1rem;
+    border-radius: var(--b-radius);
+    border: 1px solid transparent;
+  }
+
+  .back-button:hover {
+    border-color: var(--clr-gruv-blue);
+    background: rgba(69, 133, 136, 0.1);
+  }
+
+  .theme-title {
+    color: var(--clr-gruv-green);
+    font-size: var(--f-xm);
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 500px) {
+    .theme-header {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+</style> 
