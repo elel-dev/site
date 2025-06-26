@@ -87,18 +87,35 @@ import { Icon } from "astro-icon";
   @media screen and (max-width: 1150px) {
     nav {
       margin-left: 115px;
-      padding-right: 10%;
-      min-width: 740px;
+      width: calc(100vw - 115px);
+      padding-right: 5%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    nav {
+      margin-left: 10vw;
+      width: 90vw;
+      padding: 0 2%;
+    }
+
+    .links a {
+      font-size: var(--f-xs);
+      padding: 0.5%;
     }
   }
 
   @media screen and (max-width: 500px) {
     nav {
-      min-width: unset;
-      margin-left: 25vw;
+      margin-left: 0;
+      width: 100vw;
       border-bottom: none;
-      padding: 0;
-      width: 86%;
+      padding: 0 1rem;
+      justify-content: center;
+    }
+
+    .question {
+      display: none;
     }
 
     .resume {
@@ -106,11 +123,13 @@ import { Icon } from "astro-icon";
     }
 
     .links {
-      padding-right: 2.5%;
+      justify-content: center;
+      gap: 1rem;
     }
 
     .links a {
-      font-size: var(--f-m);
+      font-size: var(--f-xs);
+      padding: 0.5rem;
     }
 
     .links a span {

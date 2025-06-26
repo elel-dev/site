@@ -25,22 +25,28 @@ const { linkName } = Astro.props as Props;
       </p>
       <p>
         I hold a bacheloer degree in <span class="aqua">Computer Science</span> and
-        I'm starting to acquire the classical <span class="aqua"
-          >Cloud certifications</span
+        I'm studying to acquire CompTIA+ <span class="aqua"
+          >Secuirty certifications</span
         >. Here you can find a nice <span class="purple">TLDR</span>, but in the
         upper right corner you can also download my CV.
       </p>
       <p>
-        <span style="font-style:italic" class="purple">Languages:</span> C#, Rust,
-        Python, Kotlin, C++, TS.
-        <span style="font-style:italic" class="purple">Experience:</span> .NET, EF,
-        Docker, Kubernetes, ArgoCD, Jenkins, DataDog, Redis, Kafka, ElasticSearch,
-        PostgreSQL, MongoDB, Spring Boot, OAuth, CI/CD, Linux and IIS.
-        <span style="font-style:italic" class="purple">Cloud:</span> AWS, GoogleCloud.
+        <span style="font-style:italic" class="purple">Languages:</span> TS, Rust,
+        C++, Python, Kotlin.
+        <span style="font-style:italic" class="purple">Experience:</span> Everything
+        JS related, .NET, EF, Cryptography, Docker, Kubernetes, ArgoCD, Jenkins,
+        DataDog, Redis, Kafka, ElasticSearch, PostgreSQL, MongoDB, Spring Boot, OAuth,
+        CI/CD, Linux and IIS.
+        <span style="font-style:italic" class="purple">Cloud:</span> Azure, AWS.
+        <span style="font-style:italic" class="purple">AI:</span> OpenAI, OpenAI
+        Assistants API, RAG pipelines, MCP, TensorFlow, ML, NLP.
+        <span style="font-style:italic" class="purple">WEB3:</span> Solidity, Web3.js,
+        Hardhat, Truffle, OpenZeppelin, Infuria, MetamaskSDK, ERC-20, ERC-721(A),
+        ERC-1155, zk.
       </p>
     </div>
     <div class="img">
-      <img alt="profile picture" src="/images/foto_lore.jpeg" />
+      <img alt="profile picture" src="/images/lore-dk.jpeg" />
     </div>
   </div>
   <div class="middle" slot="middle">
@@ -63,8 +69,10 @@ const { linkName } = Astro.props as Props;
         >.<br />
         2) I hate to use external libraries: you will see me mantain <span
           class="orange">in-house libraries</span
-        > for all those little things.<br />
-        3) For this, I love to develop internal tools or DX related software.
+        > for all those little things. For this, I love to develop internal tools
+        or DX related software.<br />
+        3) I'm a young <span class="aqua">Cypherpunk</span> studying the game, I
+        write about the culture and develop P2P OSS resilient software!
       </p>
       <div class="logos">
         <Icon name="datadog" />
@@ -137,59 +145,78 @@ const { linkName } = Astro.props as Props;
     margin-bottom: 1%;
   }
 
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 1200px) {
+    .middle {
+      flex-direction: column;
+      padding-left: 5%;
+      position: relative;
+    }
+
     .text {
-      width: 80%;
+      width: 100%;
+      margin: 0;
+      order: 2;
     }
 
     .img {
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      width: 40%;
-      position: absolute;
-      top: 2.5%;
-      left: 20%;
+      width: 60%;
+      align-self: center;
+      margin-bottom: 2rem;
+      order: 1;
     }
 
-    .img img {
-      width: 100%;
-      border-radius: var(--b-radius);
+    .text-right {
+      margin-right: 0;
     }
-
-    .middle {
-      padding-top: 37.5%;
-      padding-left: 5%;
-      flex-direction: column;
-      position: relative;
+    
+    .text-left {
+      margin-left: 0;
     }
   }
 
-  @media screen and (max-width: 1600px) {
-    .text {
-      width: 80%;
+  @media screen and (max-width: 768px) {
+    .text p {
+      font-size: 18px;
     }
 
     .img {
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      width: 40%;
-      position: absolute;
-      top: 2.5%;
-      left: 20%;
+      width: 80%;
     }
 
-    .img img {
-      width: 100%;
-      border-radius: var(--b-radius);
+    [astro-icon] {
+      width: 2.5rem;
+      margin: 0 1%;
     }
 
+    .logos {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
     .middle {
-      padding-top: 48%;
-      padding-left: 5%;
-      flex-direction: column;
-      position: relative;
+      padding-left: 0;
+    }
+
+    .text p {
+      font-size: 16px;
+      margin-bottom: 1rem;
+    }
+
+    .img {
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    .decorator {
+      font-size: var(--f-m);
+      text-align: center;
+    }
+
+    [astro-icon] {
+      width: 2rem;
     }
   }
 </style>
+

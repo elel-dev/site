@@ -110,7 +110,7 @@ export const projectsList: Project[] = [
   {
     name: "SOLAR Consumer Assistant",
     description:
-      "AI product lead for the creation of the first LLM agentic Conversional Consumer Assistant in Denmark for the support of customers in their everyday shopping needs. Assistant spans across 4 countries with multilanguage and multitools support. Coded the main AI functionalities and mantainer for the evaluation and observability pipelines.",
+      "AI tech lead for the creation of the first LLM agentic Conversional Consumer Assistant in Denmark for the support of customers in their everyday shopping needs. Assistant spans across 4 countries with multilanguage and multitools support. Coded the main AI functionalities and mantainer for the evaluation and observability pipelines.",
     stack: ["Azure OpenAI", "GPT", "Word Embeddings", "OpenAI Assistants API", "Datadog"],
     githubLink: "https://www.solar.dk/nyheder/solar-assistent/",
     liveLink: "https://www.solar.dk/nyheder/solar-assistent/",

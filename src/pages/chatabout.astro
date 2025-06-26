@@ -1,0 +1,682 @@
+---
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lorenzo@terminal:~$ chat</title>
+    <meta name="description" content="Terminal interface to interact with Lorenzo Larghi" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="terminal-container">
+      <div class="terminal-header">
+        <span class="terminal-title">lorenzo@cybership:~$ interactive_chat</span>
+        <a href="/" class="terminal-close">[x]</a>
+      </div>
+
+      <div class="terminal-content">
+        <div class="ascii-banner">
+          <pre>
+ ╔═══════════════════════════════════════════╗
+ ║  Welcome to Lorenzo's Terminal Interface  ║
+ ║  Type 'help' for available commands       ║
+ ╚═══════════════════════════════════════════╝
+          </pre>
+        </div>
+
+        <div class="terminal-output" id="terminalOutput">
+          <!-- Terminal messages will be populated by JavaScript -->
+        </div>
+
+        <div class="terminal-input-line">
+          <span class="prompt">guest@lorenzo:~$ </span>
+          <input 
+            type="text" 
+            id="terminalInput" 
+            class="terminal-input"
+            placeholder=""
+            maxlength="200"
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <span class="cursor">█</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Terminal commands and responses
+      const commands = {
+        help: {
+          text: `Available commands:
+  help      - Show this help message
+  about     - Display information about Lorenzo
+  skills    - List technical skills and expertise  
+  projects  - Show featured projects and work
+  work      - Display work experience
+  contact   - Get contact information
+  clear     - Clear terminal screen
+  exit      - Return to main portfolio`,
+          delay: 800
+        },
+        about: {
+          text: `Lorenzo Larghi - Backend Engineer & Cypherpunk
+==============================================
+6 years of backend development experience
+Currently transitioning to cybersecurity
+Passionate about P2P OSS and resilient software
+Lives in terminal, codes in neovim (btw)`,
+          delay: 1200
+        },
+        skills: {
+          text: `Technical Arsenal:
+================
+Languages: TypeScript, Rust, C++, Python, Kotlin
+Backend: .NET, FastAPI, Express, Spring Boot
+Infrastructure: Docker, Kubernetes, ArgoCD, Jenkins
+Databases: PostgreSQL, MongoDB, Redis, Kafka
+Cloud: Azure, AWS, Linux administration
+AI/ML: OpenAI, TensorFlow, PyTorch, RAG pipelines
+Web3: Solidity, ERC standards, DeFi protocols`,
+          delay: 1500
+        },
+        projects: {
+          text: `Featured Digital Treasures:
+=========================
+• SOLAR Consumer Assistant - AI tech lead for LLM agent
+• NANOVERSE AGENTS - First modular GPT in blockchain
+• W.A.F.E.R. - Facial expression analysis platform
+• VIM-ASTRO - Neovim syntax plugin for .astro files
+• INCIT-EV - European EV charging infrastructure
+• M.I.I.T. - AI-enriched videoconferencing
+• CARDIODIARIO - Mobile platform for cardiomyopathic patients
+• OK Platform - Real-time energy transaction monitoring`,
+          delay: 1800
+        },
+        work: {
+          text: `Professional Journey:
+====================
+SHAPE (11/2023 - current) - Backend+AI Developer
+LINKS Foundation (01/2023 - 11/2023) - Backend Developer  
+NANOVERSE HQ (10/2021 - 01/2023) - Backend+Web3 Developer
+Vocalime (01/2022 - 03/2022) - Alexa Developer
+VirtHuLab (09/2018 - 01/2022) - Fullstack+AI Developer`,
+          delay: 1400
+        },
+        contact: {
+          text: `Reach the me at:
+=====================
+GitHub: github.com/elel-dev
+Email: elel.develop@gmail.com
+Work: lorenzo@shape.dk
+
+Always down for trickyaibullshitweb3app projects!`,
+          delay: 1000
+        },
+        whoami: {
+          text: "guest@lorenzo terminal session",
+          delay: 300
+        },
+        clear: {
+          text: "",
+          delay: 100,
+          clear: true
+        },
+        exit: {
+          text: "Closing connection... Goodbye!",
+          delay: 500,
+          redirect: "/"
+        },
+        
+        // Hidden easter egg commands (not shown in help)
+        ls: {
+          text: `projects/    skills/      experience/    coffee_addiction/
+talks/       articles/    plants/       neovim_config/
+cypherpunk/  web3/        ai_models/    italian_style/
+.ssh/        .vimrc       .bashrc       .secrets/`,
+          delay: 400
+        },
+        
+        pwd: {
+          text: "/home/lorenzo/digital_realm/cybership",
+          delay: 300
+        },
+        
+        uptime: {
+          text: "6 years, 247 days, 15 hours coding without sleep mode",
+          delay: 500
+        },
+        
+        ps: {
+          text: `PID  COMMAND
+1337 neovim --no-mouse-required
+2023 backend_service --port=8080
+3141 ai_model_training --gpu-intensive  
+4200 coffee_brewing --strength=maximum
+5555 cypherpunk_research --privacy-mode
+6969 terminal_session --always-green`,
+          delay: 600
+        },
+        
+        top: {
+          text: `Top processes by passion:
+  1. Neovim editing (99.9% CPU)
+  2. Terminal dwelling (95.2% CPU) 
+  3. Code piracy (87.3% CPU)
+  4. Plant watering (12.1% CPU)
+  5. Mouse avoidance (100% success rate)`,
+          delay: 700
+        },
+        
+        env: {
+          text: `EDITOR=neovim
+SHELL=/bin/zsh
+THEME=gruvbox
+MOUSE=disabled
+PASSION=coding
+PHILOSOPHY=cypherpunk
+COFFEE_LEVEL=maximum
+LOCATION=cybership
+STATUS=hacking_the_planet`,
+          delay: 800
+        },
+        
+        history: {
+          text: `2018: Started VirtHuLab journey
+2021: Joined NANOVERSE in web3 waters  
+2022: Brief Alexa development adventure
+2023: LINKS Foundation backend work
+2023: Sailed to SHAPE for AI+backend
+2024: Still coding, still learning`,
+          delay: 600
+        },
+        
+        vim: {
+          text: "Error: vim not found. Did you mean 'neovim'? (btw)",
+          delay: 400
+        },
+        
+        nvim: {
+          text: "💚 Ah, a person of culture! Neovim is already running in my soul.",
+          delay: 500
+        },
+        
+        "git status": {
+          text: `On branch main
+Your branch is ahead of 'origin/main' by 247 commits.
+  
+Changes to be committed:
+  modified:   life.rs
+  modified:   skills.py  
+  new file:   next_adventure.ts
+  
+Untracked files:
+  coffee_stains.log
+  mouse_hatred.md`,
+          delay: 800
+        },
+        
+        docker: {
+          text: "🐳 Docker is running... unlike my sleep schedule",
+          delay: 400
+        },
+        
+        ping: {
+          text: `PING coffee.local (127.0.0.1): 56 data bytes
+64 bytes from coffee.local: icmp_seq=0 time=0.001ms
+64 bytes from coffee.local: icmp_seq=1 time=0.001ms
+Coffee is responding perfectly!`,
+          delay: 700
+        },
+        
+        sudo: {
+          text: "lorenzo is not in the sudoers file. This incident will be reported to... Lorenzo.",
+          delay: 500
+        },
+        
+        man: {
+          text: "Redirecting to man page theme...",
+          delay: 400,
+          redirect: "/manpage"
+        },
+        
+        ssh: {
+          text: "ssh: connect to host reality.com port 22: Connection refused\nStaying in the digital realm instead.",
+          delay: 600
+        },
+        
+        cat: {
+          text: `cat: /dev/motivation: No such file or directory
+Try: cat /dev/coffee instead`,
+          delay: 400
+        },
+        
+        finger: {
+          text: `Login: lorenzo           Name: Code Pirate
+Directory: /home/lorenzo  Shell: /bin/zsh  
+Last login: Currently online (always)
+Status: Hacking the planet, one line at a time`,
+          delay: 600
+        },
+        
+        // Anti-hacker easter eggs 🏴‍☠️
+        "rm": {
+          text: `ERROR: Cannot delete /dev/sarcasm - Device is busy
+Your l33t h4x0r skills are no match for my superior intellect.
+Try learning actual programming first! 🤡`,
+          delay: 2000
+        },
+        
+        wget: {
+          text: `wget: command blocked by cypherpunk security protocols
+Did you really think I'd let you download your sketchy scripts?`,
+          delay: 600
+        },
+        
+        curl: {
+          text: `curl: (22) The requested URL returned error: 418 I'm a teapot
+Your malicious payload has been rejected with maximum sass.
+Maybe try asking nicely next time? 🫖`,
+          delay: 700
+        },
+        
+        nc: {
+          text: `netcat: Permission denied by the Code Pirate Council
+Reverse shells? Really? That's so 2010.
+I'm disappointed in your lack of creativity.`,
+          delay: 500
+        },
+        
+        nmap: {
+          text: `Starting Nmap 7.94 ( https://nmap.org ) at $(date)
+Scanning lorenzo.local...
+Host is up (0.0001s latency).
+All ports filtered by superior Italian engineering.
+🇮🇹 ARRIVEDERCI, SCRIPT KIDDIE! 🇮🇹`,
+          delay: 800
+        },
+        
+        metasploit: {
+          text: `msf6 > use exploit/linux/http/cypherpunk_immunity
+[*] No payload configured, defaulting to /dev/null
+[*] Exploit failed: Target is too based for penetration
+[*] Suggestion: Try getting a real job instead`,
+          delay: 900
+        },
+        
+        "python -c": {
+          text: `Python 3.11.0 (main, 2024-01-01, 00:00:00)
+>>> import os; os.system('whoami')
+SecurityError: Malicious code detected by Lorenzo's AI
+>>> Did you really think this would work?
+>>> sys.exit('Go touch grass')`,
+          delay: 800
+        },
+        
+        "'; DROP TABLE": {
+          text: `SQL injection detected! 🚨
+Little Bobby Tables, is that you?
+My databases are protected by the power of parameterized queries
+and years of backend development experience.
+SQLSTATE[HY000]: General error: You tried.`,
+          delay: 700
+        },
+        
+        "admin' OR '1'='1": {
+          text: `Authentication failed: Nice try, skiddie
+Username 'admin' OR '1'='1' does not exist in reality.
+Maybe try learning proper SQL first?
+Also, who still uses basic SQL injection in 2024? 💀`,
+          delay: 600
+        },
+        
+        hydra: {
+          text: `Hydra v9.5 starting at $(date)
+[ERROR] lorenzo.local: mythical creature detected
+[ERROR] Password cracking failed: Insufficient brain cells`,
+          delay: 700
+        },
+        
+        john: {
+          text: `John the Ripper 1.9.0
+Loaded 1 password hash (Lorenzo's-Custom [SHA-512-Crypt])
+Cost 1 (iteration count) is 5000 for all loaded hashes
+Press 'q' or Ctrl-C to abort, almost any other key for status
+0g 0:00:00:00 DONE (2024-01-01 00:00) 0g/s 0p/s 0c/s 0C/s
+Session completed. Password too based to crack.`,
+          delay: 900
+        },
+        
+        aircrack: {
+          text: `aircrack-ng 1.7
+Opening lorenzo_wifi.cap
+This network is protected by Italian cybersecurity magic
+and the tears of wannabe hackers.
+Quitting... Consider a career change.`,
+          delay: 600
+        },
+        
+        "cat /etc/passwd": {
+          text: `cat: /etc/passwd: Permission denied (obviously)
+Also, what year is this? 1995?
+Modern systems aren't that naive, my friend.
+Try reading some actual cybersecurity books! 📚`,
+          delay: 600
+        },
+        
+        "cat /etc/shadow": {
+          text: `cat: /etc/shadow: No such file or directory
+Shadow files are for shadows, not for script kiddies.
+Your lack of UNIX knowledge is showing.
+RTFM (Read The F***ing Manual) 📖`,
+          delay: 600
+        },
+        
+        "find / -name": {
+          text: `find: '/': Permission denied for skiddies
+Looking for config files? Password files?`,
+          delay: 700
+        },
+        
+        chmod: {
+          text: `chmod: changing permissions failed
+Error: Insufficient l33t skills detected
+Your hacking privileges have been permanently revoked
+by the Code Pirate Union Local 1337.`,
+          delay: 600
+        },
+        
+        "uname -a": {
+          text: `Linux cybership 6.6.6-cypherpunk #1 SMP PREEMPT Lorenzo-Protection
+x86_64 Intel(R) Anti-Skiddie(TM) CPU @ 9000GHz GenuineIntel GNU/Linux
+Kernel hardened against your amateur attempts since 2018.`,
+          delay: 800
+        }
+      };
+
+      const initialMessages = [
+        { text: "Establishing secure connection...", delay: 500 },
+        { text: "Connection established. Welcome to Lorenzo's system.", delay: 1000 },
+        { text: "Type 'help' for available commands or start exploring!", delay: 1500 }
+      ];
+
+      function addTerminalLine(text, className = 'system') {
+        const terminalOutput = document.getElementById('terminalOutput');
+        const line = document.createElement('div');
+        line.className = `terminal-line ${className}`;
+        line.textContent = text;
+        terminalOutput.appendChild(line);
+        terminalOutput.scrollTop = terminalOutput.scrollHeight;
+      }
+
+      function addMultiLineResponse(text, delay = 0) {
+        setTimeout(() => {
+          const lines = text.split('\n');
+          lines.forEach((line, index) => {
+            setTimeout(() => {
+              addTerminalLine(line, 'response');
+            }, index * 50);
+          });
+        }, delay);
+      }
+
+      function handleCommand(command) {
+        // Add user command to output
+        addTerminalLine(`guest@lorenzo:~$ ${command}`, 'user');
+        
+        const cmd = command.toLowerCase().trim();
+        
+        // Check for exact match first, then partial matches
+        let matchedCommand = null;
+        if (commands[cmd]) {
+          matchedCommand = commands[cmd];
+        } else {
+          // Check if any command key is contained in the input
+          for (const key in commands) {
+            if (cmd.includes(key.toLowerCase())) {
+              matchedCommand = commands[key];
+              break;
+            }
+          }
+        }
+        
+        if (matchedCommand) {
+          if (matchedCommand.clear) {
+            setTimeout(() => {
+              document.getElementById('terminalOutput').innerHTML = '';
+            }, matchedCommand.delay);
+            return;
+          }
+          
+          if (matchedCommand.redirect) {
+            setTimeout(() => {
+              window.location.href = matchedCommand.redirect;
+            }, matchedCommand.delay);
+            addMultiLineResponse(matchedCommand.text, matchedCommand.delay);
+            return;
+          }
+          
+          addMultiLineResponse(matchedCommand.text, matchedCommand.delay);
+        } else {
+          setTimeout(() => {
+            addTerminalLine(`Command not found: ${command}`, 'error');
+            addTerminalLine("Type 'help' for available commands", 'system');
+          }, 500);
+        }
+      }
+
+      // Initialize terminal
+      window.addEventListener('load', () => {
+        let delay = 0;
+        initialMessages.forEach(msg => {
+          setTimeout(() => {
+            addTerminalLine(msg.text, 'system');
+          }, msg.delay + delay);
+          delay += 100;
+        });
+      });
+
+      // Event listeners
+      document.addEventListener('DOMContentLoaded', () => {
+        const terminalInput = document.getElementById('terminalInput') as HTMLInputElement;
+
+        terminalInput.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') {
+            const command = terminalInput.value.trim();
+            if (command) {
+              handleCommand(command);
+              terminalInput.value = '';
+            }
+          }
+        });
+
+        // Focus on input
+        terminalInput.focus();
+        
+        // Keep focus on input
+        document.addEventListener('click', () => {
+          terminalInput.focus();
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'JetBrains Mono', monospace;
+    background: #000;
+    color: #00aa00;
+    min-height: 100vh;
+    padding: 1rem;
+    overflow: hidden;
+  }
+
+  .terminal-container {
+    width: 100%;
+    max-width: 1000px;
+    height: 90vh;
+    margin: 0 auto;
+    background: #000;
+    border: 2px solid #00aa00;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .terminal-header {
+    background: #00aa00;
+    color: #000;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  .terminal-title {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .terminal-close {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    transition: background 0.2s;
+  }
+
+  .terminal-close:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .terminal-content {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ascii-banner {
+    color: #00aa00;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .ascii-banner pre {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+
+  .terminal-output {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    min-height: 200px;
+  }
+
+  .terminal-line {
+    margin-bottom: 0.5rem;
+    word-wrap: break-word;
+  }
+
+  .terminal-line.user {
+    color: #00aa00;
+  }
+
+  .terminal-line.system {
+    color: #888;
+  }
+
+  .terminal-line.response {
+    color: #00aa00;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .terminal-line.error {
+    color: #ff4444;
+  }
+
+  .terminal-input-line {
+    display: flex;
+    align-items: center;
+    background: #000;
+    padding: 0.5rem 1rem;
+    border-top: 1px solid #00aa00;
+    position: relative;
+  }
+
+  .prompt {
+    color: #00aa00;
+    margin-right: 0.5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+  }
+
+  .terminal-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #00aa00;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+  }
+
+  .cursor {
+    color: #00aa00;
+    animation: blink 1s infinite;
+    margin-left: 2px;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  @media (max-width: 768px) {
+    .chat-container {
+      height: 90vh;
+      border-radius: 10px;
+    }
+
+    .chat-header {
+      padding: 1rem;
+    }
+
+    .chat-info h2 {
+      font-size: 1.1rem;
+    }
+
+    .chat-messages {
+      padding: 1rem;
+    }
+
+    .quick-actions {
+      padding: 1rem;
+    }
+
+    .chat-input-container {
+      padding: 1rem;
+    }
+  }
+</style> 
