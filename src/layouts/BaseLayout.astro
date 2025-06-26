@@ -19,7 +19,7 @@ const { title, description } = Astro.props as Props;
     <main class="main">
       <slot />
     </main>
-  </body><style>
+  </body>  <style>
     .main {
       width: var(--navbar-width);
       margin-left: var(--sidebar-width);
@@ -27,12 +27,35 @@ const { title, description } = Astro.props as Props;
       padding-top: 15vh;
     }
 
+    @media screen and (max-width: 1650px) {
+      .main {
+        width: 90vw;
+        margin-left: 10vw;
+      }
+    }
+
+    @media screen and (max-width: 1150px) {
+      .main {
+        width: calc(100vw - 115px);
+        margin-left: 115px;
+        padding: 3%;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .main {
+        width: calc(100vw - 10vw);
+        margin-left: 10vw;
+        padding: 2%;
+      }
+    }
+
     @media screen and (max-width: 500px) {
       .main {
-        padding: 0;
-        padding-top: 10vh;
-        margin-left: 25vw;
-        width: 600px;
+        width: 100vw;
+        margin-left: 0;
+        padding: 1rem;
+        padding-top: 12vh;
       }
     }
   </style>
