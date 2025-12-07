@@ -1,0 +1,122 @@
+---
+import { getCollection } from "astro:content";
+import MainHead from "../../components/Layout/MainHead.astro";
+
+const posts = (await getCollection("blog"))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<html lang="en">
+  <head>
+    <MainHead title="Blog" description="Articles and thoughts" />
+  </head>
+  <body>
+    <a href="/" class="question">
+      <img src="/images/gruv.jpg" alt="can u gruv?" />
+    </a>
+    <main class="main">
+      <h1 class="title">Blog</h1>
+      <ul class="posts">
+        {
+          posts.map((post) => (
+            <li>
+              <a href={`/blog/${post.slug}`}>
+                <span class="date">
+                  {post.data.pubDate.toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })}
+                </span>
+                <span class="post-title">{post.data.title}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </body>
+</html>
+
+<style>
+  .question {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    font-size: var(--f-xl);
+    font-style: italic;
+    z-index: 100;
+    transform: rotate(-5deg);
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  .main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 5%;
+    padding-top: 10vh;
+  }
+
+  .title {
+    color: var(--clr-gruv-orange);
+    font-size: var(--f-l);
+    margin-bottom: 2rem;
+  }
+
+  .posts {
+    list-style: none;
+  }
+
+  .posts li {
+    margin-bottom: 0.75rem;
+  }
+
+  .posts a {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 0.5rem 0;
+    transition: var(--transition-f);
+  }
+
+  .posts a:hover .post-title {
+    color: var(--clr-gruv-aqua);
+  }
+
+  .date {
+    color: var(--clr-gruv-gray);
+    font-size: var(--f-s);
+    width: 120px;
+    flex-shrink: 0;
+    text-align: right;
+  }
+
+  .post-title {
+    color: var(--clr-light-gray);
+    font-size: var(--f-s);
+  }
+
+  @media screen and (max-width: 768px) {
+    .posts a {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .date {
+      font-size: 0.875rem;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .main {
+      padding: 1rem;
+      padding-top: 8vh;
+    }
+
+    .question {
+      display: none;
+    }
+  }
+</style>
