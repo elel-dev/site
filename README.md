@@ -1,11 +1,13 @@
 # 🏴‍☠️ Lorenzo Larghi - Digital Portfolio
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live-blue)](https://your-portfolio-url.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-blue)](https://elel.dev)
 [![Astro](https://img.shields.io/badge/Built%20with-Astro-FF5D01)](https://astro.build/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://typescriptlang.org/)
 [![Neovim](https://img.shields.io/badge/Made%20in-Neovim-57A143?logo=neovim)](https://neovim.io/)
 
 ## 📸 Preview
+
+_punk died in accident, it was driving a lamborghini_
 
 <div align="center">
   <img src="./public/images/preview.png" alt="Portfolio Preview - Theme Selection Landing Page" width="800">
@@ -33,8 +35,6 @@ This portfolio offers **three unique themes** to match different audiences and m
 - **Theme**: Interactive chat interface
 - **Features**: Conversational portfolio discovery
 - **Vibe**: "Try to run `rm -fr /`"
-
-## ⁉️️ Disclaimer
 
 <div align="center">
 
