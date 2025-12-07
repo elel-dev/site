@@ -1,14 +1,4 @@
 ---
-//astro
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Presentation from "../components/Content/Presentation.astro";
-import About from "../components/Content/About.astro";
-import Work from "../components/Content/Work.astro";
-import Featured from "../components/Content/Featured.astro";
-import Contact from "../components/Content/Contact.astro";
-import Copyright from "../components/Content/Copyright.astro";
-import Talks from "../components/Content/Talks.astro";
-import Articles from "../components/Content/Articles.astro";
 import { Icon } from "astro-icon/components";
 ---
 
@@ -17,54 +7,72 @@ import { Icon } from "astro-icon/components";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lorenzo Larghi - Choose Your Experience</title>
-    <meta name="description" content="Portfolio of Lorenzo Larghi - Choose your preferred experience" />
+    <meta
+      name="description"
+      content="Portfolio of Lorenzo Larghi - Choose your preferred experience"
+    />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-
     <main class="container">
       <div class="profile-section">
-        <img src="/images/lore-dk.jpeg" alt="Lorenzo Larghi" class="profile-photo" />
+        <img
+          src="/images/lore-dk.jpeg"
+          alt="Lorenzo Larghi"
+          class="profile-photo"
+        />
         <h1 class="name">Lorenzo Larghi <span class="italian">🇮🇹</span></h1>
       </div>
 
       <div class="links-section">
-        <a href="https://github.com/elel-dev" target="_blank" class="link-button">
+        <a
+          href="https://github.com/elel-dev"
+          target="_blank"
+          class="link-button"
+        >
           <Icon name="github" class="link-icon" />
           <span>GitHub</span>
         </a>
-        <a href="https://mirror.xyz/0x88f1fD4624d81dfD223f305a30e51Ca51229c2D1" target="_blank" class="link-button">
+        <a
+          href="https://mirror.xyz/0x88f1fD4624d81dfD223f305a30e51Ca51229c2D1"
+          target="_blank"
+          class="link-button"
+        >
           <Icon name="paper" class="link-icon" />
           <span>Articles</span>
         </a>
       </div>
-      
+
       <div class="theme-selector">
-        <a href="/ide" class="theme-button ide-theme">
+        <a href="/ide" class="theme-button">
           <div class="theme-icon">💻</div>
           <h3>IDE Mode</h3>
           <p>Clean code vessel for fellow hackers and digital architects</p>
         </a>
-        
-        <a href="/manpage" class="theme-button manpage-theme">
+
+        <a href="/manpage" class="theme-button">
           <div class="theme-icon">🏴‍☠️</div>
           <h3>Man Page</h3>
           <p>Terminal wisdom for Unix pirates and command-line raiders</p>
         </a>
-        
-        <a href="/chatabout" class="theme-button chatabout-theme">
+
+        <a href="/chatabout" class="theme-button">
           <div class="theme-icon">💬</div>
           <h3>CHATaBOuT</h3>
           <p>Interactive parley to discover my digital treasures and secrets</p>
         </a>
-        
-        <a href="/resume.pdf" download="Lorenzo_Larghi_Resume.pdf" class="theme-button resume-theme">
+
+        <a
+          href="/resume.pdf"
+          download="Lorenzo_Larghi_Resume.pdf"
+          class="theme-button"
+        >
           <div class="theme-icon">📄</div>
           <h3>Download Resume</h3>
           <p>Grab the treasure map of my professional journey</p>
@@ -81,42 +89,30 @@ import { Icon } from "astro-icon/components";
     box-sizing: border-box;
   }
 
+  html {
+    background-color: #0a0a0a;
+    background-image: linear-gradient(
+      135deg,
+      #0a0a0a 0%,
+      #1a1a1a 50%,
+      #0d1324 100%
+    );
+  }
+
   body {
     font-family: "Roboto Condensed", sans-serif;
-    background: 
-      radial-gradient(ellipse at top, rgba(19, 40, 81, 0.08) 0%, transparent 50%),
-      radial-gradient(ellipse at bottom, rgba(19, 40, 81, 0.08) 0%, transparent 50%),
-      linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0d1324 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    position: relative;
-    overflow: hidden;
   }
-
-  body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-      radial-gradient(circle at 20% 80%, rgba(19, 40, 81, 0.04) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(19, 40, 81, 0.04) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
-
 
   .container {
     max-width: 900px;
     width: 100%;
     text-align: center;
-    position: relative;
-    z-index: 1;
+    padding: 4rem 0;
   }
 
   .profile-section {
@@ -131,7 +127,6 @@ import { Icon } from "astro-icon/components";
     border: 2px solid rgba(19, 40, 81, 0.7);
     margin-bottom: 2rem;
     box-shadow: 0 0 12px rgba(19, 40, 81, 0.25);
-    position: relative;
   }
 
   .name {
@@ -139,8 +134,6 @@ import { Icon } from "astro-icon/components";
     font-weight: 700;
     color: #3366cc;
     margin-bottom: 1rem;
-    text-shadow: 0 0 4px rgba(19, 40, 81, 0.5);
-    position: relative;
   }
 
   .links-section {
@@ -157,13 +150,12 @@ import { Icon } from "astro-icon/components";
     gap: 0.5rem;
     color: #4d79cc;
     text-decoration: none;
-    font-weight: 400;
     font-size: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 6px;
-    transition: all 0.2s ease;
     border: 1px solid rgba(19, 40, 81, 0.3);
     background: rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
   }
 
   .link-button:hover {
@@ -175,27 +167,22 @@ import { Icon } from "astro-icon/components";
   .link-button [astro-icon] {
     width: 16px;
     height: 16px;
-    color: #4d79cc;
   }
 
   .theme-selector {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    margin-top: 3rem;
   }
 
   .theme-button {
     background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
     border: 2px solid rgba(128, 128, 128, 0.3);
     border-radius: 15px;
     padding: 2.5rem 2rem;
     color: #cccccc;
     text-decoration: none;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
   }
 
   .theme-button:hover {
@@ -223,8 +210,6 @@ import { Icon } from "astro-icon/components";
     line-height: 1.4;
   }
 
-
-
   @media (max-width: 768px) {
     .profile-photo {
       width: 150px;
@@ -233,21 +218,6 @@ import { Icon } from "astro-icon/components";
 
     .name {
       font-size: 2.5rem;
-    }
-
-    .links-section {
-      gap: 0.75rem;
-      margin: 1.5rem 0 2.5rem 0;
-    }
-
-    .link-button {
-      padding: 0.4rem 0.8rem;
-      font-size: 0.9rem;
-    }
-
-    .link-icon {
-      width: 14px;
-      height: 14px;
     }
 
     .theme-selector {
